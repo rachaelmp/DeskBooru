@@ -17,5 +17,15 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        private void pictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).BackColor = Color.Black;
+        }
+
+        private void pictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            ((PictureBox)sender).BackColor = Color.White;
+        }
+
     }
 }
