@@ -27,9 +27,24 @@ namespace WindowsFormsApp1
             ((PictureBox)sender).BackColor = Color.White;
         }
 
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.Pink;
+
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
