@@ -46,5 +46,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void TabPanel1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
