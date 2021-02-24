@@ -58,7 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.AddFolderPanel = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,10 +70,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.AddFolderPictureBox = new System.Windows.Forms.PictureBox();
+            this.TagListPanel = new System.Windows.Forms.TabPage();
+            this.TagListRichTexBox = new System.Windows.Forms.RichTextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.HelpPanel = new System.Windows.Forms.TabPage();
+            this.HelpPanelTextBox = new System.Windows.Forms.TextBox();
+            this.HelpPanelPictureBox = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -89,9 +92,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.ImageTaggingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.AddFolderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddFolderPictureBox)).BeginInit();
+            this.TagListPanel.SuspendLayout();
+            this.HelpPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpPanelPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -167,13 +172,15 @@
             // 
             this.TabPanel1.Controls.Add(this.SearchPanel);
             this.TabPanel1.Controls.Add(this.ImageTaggingPanel);
-            this.TabPanel1.Controls.Add(this.tabPage1);
-            this.TabPanel1.Controls.Add(this.tabPage2);
+            this.TabPanel1.Controls.Add(this.AddFolderPanel);
+            this.TabPanel1.Controls.Add(this.TagListPanel);
+            this.TabPanel1.Controls.Add(this.HelpPanel);
             this.TabPanel1.Location = new System.Drawing.Point(183, 2);
             this.TabPanel1.Name = "TabPanel1";
             this.TabPanel1.SelectedIndex = 0;
             this.TabPanel1.Size = new System.Drawing.Size(964, 609);
             this.TabPanel1.TabIndex = 9;
+            this.TabPanel1.SelectedIndexChanged += new System.EventHandler(this.TabPanel1_SelectedIndexChanged);
             // 
             // SearchPanel
             // 
@@ -389,26 +396,26 @@
             this.textBox2.Size = new System.Drawing.Size(448, 73);
             this.textBox2.TabIndex = 0;
             // 
-            // tabPage1
+            // AddFolderPanel
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.pictureBox10);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(956, 581);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Add Folder";
+            this.AddFolderPanel.BackColor = System.Drawing.Color.DimGray;
+            this.AddFolderPanel.Controls.Add(this.label11);
+            this.AddFolderPanel.Controls.Add(this.button5);
+            this.AddFolderPanel.Controls.Add(this.label8);
+            this.AddFolderPanel.Controls.Add(this.textBox6);
+            this.AddFolderPanel.Controls.Add(this.button3);
+            this.AddFolderPanel.Controls.Add(this.label5);
+            this.AddFolderPanel.Controls.Add(this.button4);
+            this.AddFolderPanel.Controls.Add(this.label6);
+            this.AddFolderPanel.Controls.Add(this.label7);
+            this.AddFolderPanel.Controls.Add(this.textBox4);
+            this.AddFolderPanel.Controls.Add(this.textBox5);
+            this.AddFolderPanel.Controls.Add(this.AddFolderPictureBox);
+            this.AddFolderPanel.Location = new System.Drawing.Point(4, 24);
+            this.AddFolderPanel.Name = "AddFolderPanel";
+            this.AddFolderPanel.Size = new System.Drawing.Size(956, 581);
+            this.AddFolderPanel.TabIndex = 2;
+            this.AddFolderPanel.Text = "Add Folder";
             // 
             // label11
             // 
@@ -510,37 +517,68 @@
             this.textBox5.Size = new System.Drawing.Size(448, 73);
             this.textBox5.TabIndex = 8;
             // 
-            // pictureBox10
+            // AddFolderPictureBox
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.Location = new System.Drawing.Point(579, 38);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(377, 500);
-            this.pictureBox10.TabIndex = 5;
-            this.pictureBox10.TabStop = false;
+            this.AddFolderPictureBox.BackColor = System.Drawing.Color.White;
+            this.AddFolderPictureBox.Location = new System.Drawing.Point(579, 38);
+            this.AddFolderPictureBox.Name = "AddFolderPictureBox";
+            this.AddFolderPictureBox.Size = new System.Drawing.Size(377, 500);
+            this.AddFolderPictureBox.TabIndex = 5;
+            this.AddFolderPictureBox.TabStop = false;
             // 
-            // tabPage2
+            // TagListPanel
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DimGray;
-            this.tabPage2.Controls.Add(this.richTextBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(956, 581);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "Tag List";
+            this.TagListPanel.BackColor = System.Drawing.Color.DimGray;
+            this.TagListPanel.Controls.Add(this.TagListRichTexBox);
+            this.TagListPanel.Location = new System.Drawing.Point(4, 24);
+            this.TagListPanel.Name = "TagListPanel";
+            this.TagListPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.TagListPanel.Size = new System.Drawing.Size(956, 581);
+            this.TagListPanel.TabIndex = 3;
+            this.TagListPanel.Text = "Tag List";
+            // 
+            // TagListRichTexBox
+            // 
+            this.TagListRichTexBox.Location = new System.Drawing.Point(10, 5);
+            this.TagListRichTexBox.Name = "TagListRichTexBox";
+            this.TagListRichTexBox.Size = new System.Drawing.Size(935, 411);
+            this.TagListRichTexBox.TabIndex = 0;
+            this.TagListRichTexBox.Text = "Will have a list of tags here soon";
             // 
             // folderBrowserDialog1
             // 
             this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
-            // richTextBox1
+            // HelpPanel
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(10, 5);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(935, 411);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.HelpPanel.BackColor = System.Drawing.Color.DimGray;
+            this.HelpPanel.Controls.Add(this.HelpPanelPictureBox);
+            this.HelpPanel.Controls.Add(this.HelpPanelTextBox);
+            this.HelpPanel.Location = new System.Drawing.Point(4, 24);
+            this.HelpPanel.Name = "HelpPanel";
+            this.HelpPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.HelpPanel.Size = new System.Drawing.Size(956, 581);
+            this.HelpPanel.TabIndex = 4;
+            this.HelpPanel.Text = "Help";
+            // 
+            // HelpPanelTextBox
+            // 
+            this.HelpPanelTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HelpPanelTextBox.Location = new System.Drawing.Point(27, 25);
+            this.HelpPanelTextBox.Multiline = true;
+            this.HelpPanelTextBox.Name = "HelpPanelTextBox";
+            this.HelpPanelTextBox.Size = new System.Drawing.Size(903, 535);
+            this.HelpPanelTextBox.TabIndex = 0;
+            this.HelpPanelTextBox.Text = resources.GetString("HelpPanelTextBox.Text");
+            // 
+            // HelpPanelPictureBox
+            // 
+            this.HelpPanelPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HelpPanelPictureBox.BackgroundImage")));
+            this.HelpPanelPictureBox.Location = new System.Drawing.Point(579, 68);
+            this.HelpPanelPictureBox.Name = "HelpPanelPictureBox";
+            this.HelpPanelPictureBox.Size = new System.Drawing.Size(268, 440);
+            this.HelpPanelPictureBox.TabIndex = 1;
+            this.HelpPanelPictureBox.TabStop = false;
             // 
             // Form1
             // 
@@ -571,10 +609,13 @@
             this.ImageTaggingPanel.ResumeLayout(false);
             this.ImageTaggingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.AddFolderPanel.ResumeLayout(false);
+            this.AddFolderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddFolderPictureBox)).EndInit();
+            this.TagListPanel.ResumeLayout(false);
+            this.HelpPanel.ResumeLayout(false);
+            this.HelpPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpPanelPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,7 +648,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage AddFolderPanel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button3;
@@ -617,15 +658,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox AddFolderPictureBox;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage TagListPanel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox TagListRichTexBox;
+        private System.Windows.Forms.TabPage HelpPanel;
+        private System.Windows.Forms.PictureBox HelpPanelPictureBox;
+        private System.Windows.Forms.TextBox HelpPanelTextBox;
     }
 }
 
