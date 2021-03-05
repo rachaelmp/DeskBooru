@@ -52,13 +52,15 @@
             this.button6 = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.BrowseImageButton = new System.Windows.Forms.Button();
+            this.ImagePreviewSingle = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.AddFolderPanel = new System.Windows.Forms.TabPage();
+            this.forwardButtonFolder = new System.Windows.Forms.Button();
+            this.backButtonFolder = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,10 +75,11 @@
             this.AddFolderPictureBox = new System.Windows.Forms.PictureBox();
             this.TagListPanel = new System.Windows.Forms.TabPage();
             this.TagListRichTexBox = new System.Windows.Forms.RichTextBox();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.HelpPanel = new System.Windows.Forms.TabPage();
-            this.HelpPanelTextBox = new System.Windows.Forms.TextBox();
             this.HelpPanelPictureBox = new System.Windows.Forms.PictureBox();
+            this.HelpPanelTextBox = new System.Windows.Forms.TextBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -91,7 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.ImageTaggingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePreviewSingle)).BeginInit();
             this.AddFolderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddFolderPictureBox)).BeginInit();
             this.TagListPanel.SuspendLayout();
@@ -156,7 +159,6 @@
             this.label10.Size = new System.Drawing.Size(148, 297);
             this.label10.TabIndex = 1;
             this.label10.Text = "Your personal image storing app!";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -220,7 +222,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(231, 235);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -293,8 +294,8 @@
             this.ImageTaggingPanel.Controls.Add(this.button6);
             this.ImageTaggingPanel.Controls.Add(this.SubmitButton);
             this.ImageTaggingPanel.Controls.Add(this.label4);
-            this.ImageTaggingPanel.Controls.Add(this.button2);
-            this.ImageTaggingPanel.Controls.Add(this.pictureBox9);
+            this.ImageTaggingPanel.Controls.Add(this.BrowseImageButton);
+            this.ImageTaggingPanel.Controls.Add(this.ImagePreviewSingle);
             this.ImageTaggingPanel.Controls.Add(this.label3);
             this.ImageTaggingPanel.Controls.Add(this.label2);
             this.ImageTaggingPanel.Controls.Add(this.textBox3);
@@ -342,23 +343,24 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Choose Image";
             // 
-            // button2
+            // BrowseImageButton
             // 
-            this.button2.Location = new System.Drawing.Point(95, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Browse";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BrowseImageButton.Location = new System.Drawing.Point(95, 38);
+            this.BrowseImageButton.Name = "BrowseImageButton";
+            this.BrowseImageButton.Size = new System.Drawing.Size(75, 23);
+            this.BrowseImageButton.TabIndex = 5;
+            this.BrowseImageButton.Text = "Browse";
+            this.BrowseImageButton.UseVisualStyleBackColor = true;
+            this.BrowseImageButton.Click += new System.EventHandler(this.triggerChooseImageDialog);
             // 
-            // pictureBox9
+            // ImagePreviewSingle
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
-            this.pictureBox9.Location = new System.Drawing.Point(579, 38);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(377, 500);
-            this.pictureBox9.TabIndex = 4;
-            this.pictureBox9.TabStop = false;
+            this.ImagePreviewSingle.BackColor = System.Drawing.Color.White;
+            this.ImagePreviewSingle.Location = new System.Drawing.Point(579, 38);
+            this.ImagePreviewSingle.Name = "ImagePreviewSingle";
+            this.ImagePreviewSingle.Size = new System.Drawing.Size(377, 500);
+            this.ImagePreviewSingle.TabIndex = 4;
+            this.ImagePreviewSingle.TabStop = false;
             // 
             // label3
             // 
@@ -399,6 +401,8 @@
             // AddFolderPanel
             // 
             this.AddFolderPanel.BackColor = System.Drawing.Color.DimGray;
+            this.AddFolderPanel.Controls.Add(this.forwardButtonFolder);
+            this.AddFolderPanel.Controls.Add(this.backButtonFolder);
             this.AddFolderPanel.Controls.Add(this.label11);
             this.AddFolderPanel.Controls.Add(this.button5);
             this.AddFolderPanel.Controls.Add(this.label8);
@@ -416,6 +420,28 @@
             this.AddFolderPanel.Size = new System.Drawing.Size(956, 581);
             this.AddFolderPanel.TabIndex = 2;
             this.AddFolderPanel.Text = "Add Folder";
+            // 
+            // forwardButtonFolder
+            // 
+            this.forwardButtonFolder.Enabled = false;
+            this.forwardButtonFolder.Location = new System.Drawing.Point(787, 544);
+            this.forwardButtonFolder.Name = "forwardButtonFolder";
+            this.forwardButtonFolder.Size = new System.Drawing.Size(75, 23);
+            this.forwardButtonFolder.TabIndex = 20;
+            this.forwardButtonFolder.Text = "->";
+            this.forwardButtonFolder.UseVisualStyleBackColor = true;
+            this.forwardButtonFolder.Click += new System.EventHandler(this.forwardButtonBrowse);
+            // 
+            // backButtonFolder
+            // 
+            this.backButtonFolder.Enabled = false;
+            this.backButtonFolder.Location = new System.Drawing.Point(706, 544);
+            this.backButtonFolder.Name = "backButtonFolder";
+            this.backButtonFolder.Size = new System.Drawing.Size(75, 23);
+            this.backButtonFolder.TabIndex = 19;
+            this.backButtonFolder.Text = "<-";
+            this.backButtonFolder.UseVisualStyleBackColor = true;
+            this.backButtonFolder.Click += new System.EventHandler(this.backButtonBrowse);
             // 
             // label11
             // 
@@ -479,7 +505,7 @@
             this.button4.TabIndex = 12;
             this.button4.Text = "Browse";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.triggerFolderDialog);
             // 
             // label6
             // 
@@ -545,10 +571,6 @@
             this.TagListRichTexBox.TabIndex = 0;
             this.TagListRichTexBox.Text = "Will have a list of tags here soon";
             // 
-            // folderBrowserDialog1
-            // 
-            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
-            // 
             // HelpPanel
             // 
             this.HelpPanel.BackColor = System.Drawing.Color.DimGray;
@@ -561,6 +583,15 @@
             this.HelpPanel.TabIndex = 4;
             this.HelpPanel.Text = "Help";
             // 
+            // HelpPanelPictureBox
+            // 
+            this.HelpPanelPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HelpPanelPictureBox.BackgroundImage")));
+            this.HelpPanelPictureBox.Location = new System.Drawing.Point(579, 68);
+            this.HelpPanelPictureBox.Name = "HelpPanelPictureBox";
+            this.HelpPanelPictureBox.Size = new System.Drawing.Size(268, 440);
+            this.HelpPanelPictureBox.TabIndex = 1;
+            this.HelpPanelPictureBox.TabStop = false;
+            // 
             // HelpPanelTextBox
             // 
             this.HelpPanelTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -571,14 +602,9 @@
             this.HelpPanelTextBox.TabIndex = 0;
             this.HelpPanelTextBox.Text = resources.GetString("HelpPanelTextBox.Text");
             // 
-            // HelpPanelPictureBox
+            // openFileDialog1
             // 
-            this.HelpPanelPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HelpPanelPictureBox.BackgroundImage")));
-            this.HelpPanelPictureBox.Location = new System.Drawing.Point(579, 68);
-            this.HelpPanelPictureBox.Name = "HelpPanelPictureBox";
-            this.HelpPanelPictureBox.Size = new System.Drawing.Size(268, 440);
-            this.HelpPanelPictureBox.TabIndex = 1;
-            this.HelpPanelPictureBox.TabStop = false;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -608,7 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ImageTaggingPanel.ResumeLayout(false);
             this.ImageTaggingPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagePreviewSingle)).EndInit();
             this.AddFolderPanel.ResumeLayout(false);
             this.AddFolderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddFolderPictureBox)).EndInit();
@@ -642,8 +668,8 @@
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button BrowseImageButton;
+        private System.Windows.Forms.PictureBox ImagePreviewSingle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
@@ -670,6 +696,9 @@
         private System.Windows.Forms.TabPage HelpPanel;
         private System.Windows.Forms.PictureBox HelpPanelPictureBox;
         private System.Windows.Forms.TextBox HelpPanelTextBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button forwardButtonFolder;
+        private System.Windows.Forms.Button backButtonFolder;
     }
 }
 
