@@ -49,20 +49,20 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.ImageTaggingPanel = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.AddImagesAddButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.BrowseImageButton = new System.Windows.Forms.Button();
             this.ImagePreviewSingle = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AddImageAddTagTextBox = new System.Windows.Forms.TextBox();
+            this.AddImageCurrentTagTexBox = new System.Windows.Forms.TextBox();
             this.AddFolderPanel = new System.Windows.Forms.TabPage();
             this.forwardButtonFolder = new System.Windows.Forms.Button();
             this.backButtonFolder = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.AddFolderAddButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -70,8 +70,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.AddFolderAddTagTextBox = new System.Windows.Forms.TextBox();
+            this.AddFolderCurrentTagTextBox = new System.Windows.Forms.TextBox();
             this.AddFolderPictureBox = new System.Windows.Forms.PictureBox();
             this.TagListPanel = new System.Windows.Forms.TabPage();
             this.TagListRichTexBox = new System.Windows.Forms.RichTextBox();
@@ -80,6 +80,8 @@
             this.HelpPanelTextBox = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.clearTagsSingleButton = new System.Windows.Forms.Button();
+            this.clearTagsFolder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -290,16 +292,17 @@
             // ImageTaggingPanel
             // 
             this.ImageTaggingPanel.BackColor = System.Drawing.Color.DimGray;
+            this.ImageTaggingPanel.Controls.Add(this.clearTagsSingleButton);
             this.ImageTaggingPanel.Controls.Add(this.label12);
-            this.ImageTaggingPanel.Controls.Add(this.button6);
+            this.ImageTaggingPanel.Controls.Add(this.AddImagesAddButton);
             this.ImageTaggingPanel.Controls.Add(this.SubmitButton);
             this.ImageTaggingPanel.Controls.Add(this.label4);
             this.ImageTaggingPanel.Controls.Add(this.BrowseImageButton);
             this.ImageTaggingPanel.Controls.Add(this.ImagePreviewSingle);
             this.ImageTaggingPanel.Controls.Add(this.label3);
             this.ImageTaggingPanel.Controls.Add(this.label2);
-            this.ImageTaggingPanel.Controls.Add(this.textBox3);
-            this.ImageTaggingPanel.Controls.Add(this.textBox2);
+            this.ImageTaggingPanel.Controls.Add(this.AddImageAddTagTextBox);
+            this.ImageTaggingPanel.Controls.Add(this.AddImageCurrentTagTexBox);
             this.ImageTaggingPanel.Location = new System.Drawing.Point(4, 24);
             this.ImageTaggingPanel.Name = "ImageTaggingPanel";
             this.ImageTaggingPanel.Padding = new System.Windows.Forms.Padding(3);
@@ -316,14 +319,15 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Image Preview:";
             // 
-            // button6
+            // AddImagesAddButton
             // 
-            this.button6.Location = new System.Drawing.Point(296, 324);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = true;
+            this.AddImagesAddButton.Location = new System.Drawing.Point(296, 324);
+            this.AddImagesAddButton.Name = "AddImagesAddButton";
+            this.AddImagesAddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddImagesAddButton.TabIndex = 8;
+            this.AddImagesAddButton.Text = "Add";
+            this.AddImagesAddButton.UseVisualStyleBackColor = true;
+            this.AddImagesAddButton.Click += new System.EventHandler(this.AddImagesAddButton_Click);
             // 
             // SubmitButton
             // 
@@ -380,31 +384,33 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Add Tag";
             // 
-            // textBox3
+            // AddImageAddTagTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(95, 324);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Write a tag here to add";
-            this.textBox3.Size = new System.Drawing.Size(195, 23);
-            this.textBox3.TabIndex = 1;
+            this.AddImageAddTagTextBox.Location = new System.Drawing.Point(95, 324);
+            this.AddImageAddTagTextBox.Name = "AddImageAddTagTextBox";
+            this.AddImageAddTagTextBox.PlaceholderText = "Write a tag here to add";
+            this.AddImageAddTagTextBox.Size = new System.Drawing.Size(195, 23);
+            this.AddImageAddTagTextBox.TabIndex = 1;
+            this.AddImageAddTagTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddImageAddTagTextBox_KeyDown);
             // 
-            // textBox2
+            // AddImageCurrentTagTexBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 385);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Tags you have added to the current image will appear here";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(448, 73);
-            this.textBox2.TabIndex = 0;
+            this.AddImageCurrentTagTexBox.Location = new System.Drawing.Point(95, 385);
+            this.AddImageCurrentTagTexBox.Multiline = true;
+            this.AddImageCurrentTagTexBox.Name = "AddImageCurrentTagTexBox";
+            this.AddImageCurrentTagTexBox.PlaceholderText = "Tags you have added to the current image will appear here";
+            this.AddImageCurrentTagTexBox.ReadOnly = true;
+            this.AddImageCurrentTagTexBox.Size = new System.Drawing.Size(448, 73);
+            this.AddImageCurrentTagTexBox.TabIndex = 0;
             // 
             // AddFolderPanel
             // 
             this.AddFolderPanel.BackColor = System.Drawing.Color.DimGray;
+            this.AddFolderPanel.Controls.Add(this.clearTagsFolder);
             this.AddFolderPanel.Controls.Add(this.forwardButtonFolder);
             this.AddFolderPanel.Controls.Add(this.backButtonFolder);
             this.AddFolderPanel.Controls.Add(this.label11);
-            this.AddFolderPanel.Controls.Add(this.button5);
+            this.AddFolderPanel.Controls.Add(this.AddFolderAddButton);
             this.AddFolderPanel.Controls.Add(this.label8);
             this.AddFolderPanel.Controls.Add(this.textBox6);
             this.AddFolderPanel.Controls.Add(this.button3);
@@ -412,8 +418,8 @@
             this.AddFolderPanel.Controls.Add(this.button4);
             this.AddFolderPanel.Controls.Add(this.label6);
             this.AddFolderPanel.Controls.Add(this.label7);
-            this.AddFolderPanel.Controls.Add(this.textBox4);
-            this.AddFolderPanel.Controls.Add(this.textBox5);
+            this.AddFolderPanel.Controls.Add(this.AddFolderAddTagTextBox);
+            this.AddFolderPanel.Controls.Add(this.AddFolderCurrentTagTextBox);
             this.AddFolderPanel.Controls.Add(this.AddFolderPictureBox);
             this.AddFolderPanel.Location = new System.Drawing.Point(4, 24);
             this.AddFolderPanel.Name = "AddFolderPanel";
@@ -452,14 +458,15 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "Image Preview:";
             // 
-            // button5
+            // AddFolderAddButton
             // 
-            this.button5.Location = new System.Drawing.Point(296, 324);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Add";
-            this.button5.UseVisualStyleBackColor = true;
+            this.AddFolderAddButton.Location = new System.Drawing.Point(296, 324);
+            this.AddFolderAddButton.Name = "AddFolderAddButton";
+            this.AddFolderAddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddFolderAddButton.TabIndex = 17;
+            this.AddFolderAddButton.Text = "Add";
+            this.AddFolderAddButton.UseVisualStyleBackColor = true;
+            this.AddFolderAddButton.Click += new System.EventHandler(this.AddFolderAddButton_Click);
             // 
             // label8
             // 
@@ -525,23 +532,25 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Add Tag";
             // 
-            // textBox4
+            // AddFolderAddTagTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(95, 324);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Write a tag here to add";
-            this.textBox4.Size = new System.Drawing.Size(195, 23);
-            this.textBox4.TabIndex = 9;
+            this.AddFolderAddTagTextBox.AcceptsReturn = true;
+            this.AddFolderAddTagTextBox.Location = new System.Drawing.Point(95, 324);
+            this.AddFolderAddTagTextBox.Name = "AddFolderAddTagTextBox";
+            this.AddFolderAddTagTextBox.PlaceholderText = "Write a tag here to add";
+            this.AddFolderAddTagTextBox.Size = new System.Drawing.Size(195, 23);
+            this.AddFolderAddTagTextBox.TabIndex = 9;
+            this.AddFolderAddTagTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddFolderAddTagTextBox_KeyDown);
             // 
-            // textBox5
+            // AddFolderCurrentTagTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(95, 385);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "Tags you have added to the current image will appear here";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(448, 73);
-            this.textBox5.TabIndex = 8;
+            this.AddFolderCurrentTagTextBox.Location = new System.Drawing.Point(95, 385);
+            this.AddFolderCurrentTagTextBox.Multiline = true;
+            this.AddFolderCurrentTagTextBox.Name = "AddFolderCurrentTagTextBox";
+            this.AddFolderCurrentTagTextBox.PlaceholderText = "Tags you have added to the current image will appear here";
+            this.AddFolderCurrentTagTextBox.ReadOnly = true;
+            this.AddFolderCurrentTagTextBox.Size = new System.Drawing.Size(448, 73);
+            this.AddFolderCurrentTagTextBox.TabIndex = 8;
             // 
             // AddFolderPictureBox
             // 
@@ -598,6 +607,7 @@
             this.HelpPanelTextBox.Location = new System.Drawing.Point(27, 25);
             this.HelpPanelTextBox.Multiline = true;
             this.HelpPanelTextBox.Name = "HelpPanelTextBox";
+            this.HelpPanelTextBox.ReadOnly = true;
             this.HelpPanelTextBox.Size = new System.Drawing.Size(903, 535);
             this.HelpPanelTextBox.TabIndex = 0;
             this.HelpPanelTextBox.Text = resources.GetString("HelpPanelTextBox.Text");
@@ -605,6 +615,26 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // clearTagsSingleButton
+            // 
+            this.clearTagsSingleButton.Location = new System.Drawing.Point(468, 464);
+            this.clearTagsSingleButton.Name = "clearTagsSingleButton";
+            this.clearTagsSingleButton.Size = new System.Drawing.Size(75, 23);
+            this.clearTagsSingleButton.TabIndex = 20;
+            this.clearTagsSingleButton.Text = "Clear Tags";
+            this.clearTagsSingleButton.UseVisualStyleBackColor = true;
+            this.clearTagsSingleButton.Click += new System.EventHandler(this.clearTagsSingleButton_Click);
+            // 
+            // clearTagsFolder
+            // 
+            this.clearTagsFolder.Location = new System.Drawing.Point(468, 464);
+            this.clearTagsFolder.Name = "clearTagsFolder";
+            this.clearTagsFolder.Size = new System.Drawing.Size(75, 23);
+            this.clearTagsFolder.TabIndex = 21;
+            this.clearTagsFolder.Text = "Clear Tags";
+            this.clearTagsFolder.UseVisualStyleBackColor = true;
+            this.clearTagsFolder.Click += new System.EventHandler(this.clearTagsFolder_Click);
             // 
             // Form1
             // 
@@ -672,8 +702,8 @@
         private System.Windows.Forms.PictureBox ImagePreviewSingle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox AddImageAddTagTextBox;
+        private System.Windows.Forms.TextBox AddImageCurrentTagTexBox;
         private System.Windows.Forms.TabPage AddFolderPanel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox6;
@@ -682,11 +712,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox AddFolderAddTagTextBox;
+        private System.Windows.Forms.TextBox AddFolderCurrentTagTextBox;
         private System.Windows.Forms.PictureBox AddFolderPictureBox;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button AddImagesAddButton;
+        private System.Windows.Forms.Button AddFolderAddButton;
         private System.Windows.Forms.TabPage TagListPanel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -699,6 +729,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button forwardButtonFolder;
         private System.Windows.Forms.Button backButtonFolder;
+        private System.Windows.Forms.Button clearTagsSingleButton;
+        private System.Windows.Forms.Button clearTagsFolder;
     }
 }
 
