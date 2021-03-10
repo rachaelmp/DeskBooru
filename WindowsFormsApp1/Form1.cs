@@ -172,14 +172,70 @@ namespace WindowsFormsApp1
 
         private void clearTagsFolder_Click(object sender, EventArgs e)
         {
-            GlobalStatics.currentTagsFolder.Clear();
-            AddFolderCurrentTagTextBox.Clear();
+            //When clicking "Clear Tags" it will delete everything in current tags if nothing was in the text
+            if (String.IsNullOrEmpty(DeleteFolderTagTextBox.Text))
+            {
+                GlobalStatics.currentTagsFolder.Clear();
+                AddFolderCurrentTagTextBox.Clear();
+            }
+            //Allow to delete specific tags when typed in the text box.
+            else
+            {
+                string Tag;
+                Tag = DeleteFolderTagTextBox.Text;
+
+                //Iterate through the list and if the word is found then remove it from the list
+                for (int i = 0; i < GlobalStatics.currentTagsFolder.Count; i++)
+                {
+                    if (Tag == GlobalStatics.currentTagsFolder[i])
+                    {
+                        GlobalStatics.currentTagsFolder.RemoveAt(i);
+                    }
+                }
+                //Clears the current tags textbox and then print all the elements in the list
+                // into the current tags textbox.
+                AddFolderCurrentTagTextBox.Clear();
+                foreach (string var in GlobalStatics.currentTagsFolder)
+                {
+                    AddFolderCurrentTagTextBox.AppendText(var);
+                    AddFolderCurrentTagTextBox.AppendText(", ");
+                }
+            }
+            DeleteFolderTagTextBox.Clear();
         }
 
         private void clearTagsSingleButton_Click(object sender, EventArgs e)
         {
-            GlobalStatics.currentTagsSingle.Clear();
-            AddImageCurrentTagTexBox.Clear();
+            //When clicking "Clear Tags" it will delete everything in current tags if nothing was in the text
+            if(String.IsNullOrEmpty(AddImageDeleteTagTextBox.Text))
+            {
+                GlobalStatics.currentTagsSingle.Clear();
+                AddImageCurrentTagTexBox.Clear();
+            }
+            //Allow to delete specific tags when typed in the text box.
+            else
+            {
+                string Tag;
+                Tag = AddImageDeleteTagTextBox.Text;
+                
+                //Iterate through the list and if the word is found then remove it from the list
+                for (int i = 0; i < GlobalStatics.currentTagsSingle.Count; i++)
+                {
+                    if(Tag == GlobalStatics.currentTagsSingle[i])
+                    {
+                        GlobalStatics.currentTagsSingle.RemoveAt(i);   
+                    }
+                }
+                //Clears the current tags textbox and then print all the elements in the list
+                // into the current tags textbox.
+                AddImageCurrentTagTexBox.Clear();
+                foreach (string var in GlobalStatics.currentTagsSingle)
+                {
+                    AddImageCurrentTagTexBox.AppendText(var);
+                    AddImageCurrentTagTexBox.AppendText(", ");
+                }
+            }
+            AddImageDeleteTagTextBox.Clear();
         }
     }
 }
