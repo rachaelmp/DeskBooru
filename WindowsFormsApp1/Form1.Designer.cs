@@ -62,6 +62,8 @@
             this.AddImageAddTagTextBox = new System.Windows.Forms.TextBox();
             this.AddImageCurrentTagTexBox = new System.Windows.Forms.TextBox();
             this.AddFolderPanel = new System.Windows.Forms.TabPage();
+            this.DeleteFolderTagTextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.clearTagsFolder = new System.Windows.Forms.Button();
             this.forwardButtonFolder = new System.Windows.Forms.Button();
             this.backButtonFolder = new System.Windows.Forms.Button();
@@ -82,10 +84,14 @@
             this.HelpPanel = new System.Windows.Forms.TabPage();
             this.HelpPanelPictureBox = new System.Windows.Forms.PictureBox();
             this.HelpPanelTextBox = new System.Windows.Forms.TextBox();
+            this.GalleriesPanel = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.label14 = new System.Windows.Forms.Label();
-            this.DeleteFolderTagTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -106,6 +112,8 @@
             this.TagListPanel.SuspendLayout();
             this.HelpPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpPanelPictureBox)).BeginInit();
+            this.GalleriesPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -183,6 +191,7 @@
             this.TabPanel1.Controls.Add(this.AddFolderPanel);
             this.TabPanel1.Controls.Add(this.TagListPanel);
             this.TabPanel1.Controls.Add(this.HelpPanel);
+            this.TabPanel1.Controls.Add(this.GalleriesPanel);
             this.TabPanel1.Location = new System.Drawing.Point(183, 2);
             this.TabPanel1.Name = "TabPanel1";
             this.TabPanel1.SelectedIndex = 0;
@@ -462,6 +471,23 @@
             this.AddFolderPanel.TabIndex = 2;
             this.AddFolderPanel.Text = "Add Folder";
             // 
+            // DeleteFolderTagTextBox
+            // 
+            this.DeleteFolderTagTextBox.Location = new System.Drawing.Point(95, 335);
+            this.DeleteFolderTagTextBox.Name = "DeleteFolderTagTextBox";
+            this.DeleteFolderTagTextBox.PlaceholderText = "Write a tag here to delete";
+            this.DeleteFolderTagTextBox.Size = new System.Drawing.Size(192, 23);
+            this.DeleteFolderTagTextBox.TabIndex = 23;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(28, 339);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 15);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Delete Tag";
+            // 
             // clearTagsFolder
             // 
             this.clearTagsFolder.Location = new System.Drawing.Point(295, 335);
@@ -657,26 +683,74 @@
             this.HelpPanelTextBox.TabIndex = 0;
             this.HelpPanelTextBox.Text = resources.GetString("HelpPanelTextBox.Text");
             // 
+            // GalleriesPanel
+            // 
+            this.GalleriesPanel.BackColor = System.Drawing.Color.DimGray;
+            this.GalleriesPanel.Controls.Add(this.panel3);
+            this.GalleriesPanel.Location = new System.Drawing.Point(4, 24);
+            this.GalleriesPanel.Name = "GalleriesPanel";
+            this.GalleriesPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.GalleriesPanel.Size = new System.Drawing.Size(956, 581);
+            this.GalleriesPanel.TabIndex = 5;
+            this.GalleriesPanel.Text = "Galleries";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(972, 78);
+            this.panel3.TabIndex = 12;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Date Created (Ascending)",
+            "Date Created (Descending)",
+            "Date Modified (Ascending)",
+            "Date Modified (Descending)",
+            "Name (Alphabetical)"});
+            this.comboBox1.Location = new System.Drawing.Point(306, 21);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 3;
+            this.comboBox1.Text = "Sort by...";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(16, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 25);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Search";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(263, 15);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(36, 36);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "🔎";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(91, 23);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(166, 23);
+            this.textBox3.TabIndex = 0;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 339);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 15);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Delete Tag";
-            // 
-            // DeleteFolderTagTextBox
-            // 
-            this.DeleteFolderTagTextBox.Location = new System.Drawing.Point(95, 335);
-            this.DeleteFolderTagTextBox.Name = "DeleteFolderTagTextBox";
-            this.DeleteFolderTagTextBox.PlaceholderText = "Write a tag here to delete";
-            this.DeleteFolderTagTextBox.Size = new System.Drawing.Size(192, 23);
-            this.DeleteFolderTagTextBox.TabIndex = 23;
             // 
             // Form1
             // 
@@ -714,6 +788,9 @@
             this.HelpPanel.ResumeLayout(false);
             this.HelpPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpPanelPictureBox)).EndInit();
+            this.GalleriesPanel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -777,6 +854,12 @@
         private System.Windows.Forms.TextBox AddImageDeleteTagTextBox;
         private System.Windows.Forms.TextBox DeleteFolderTagTextBox;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TabPage GalleriesPanel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
