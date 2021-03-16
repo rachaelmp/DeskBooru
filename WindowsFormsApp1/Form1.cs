@@ -237,5 +237,11 @@ namespace WindowsFormsApp1
             }
             AddImageDeleteTagTextBox.Clear();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
     }
 }

@@ -64,6 +64,8 @@
             this.AddImageAddTagTextBox = new System.Windows.Forms.TextBox();
             this.AddImageCurrentTagTexBox = new System.Windows.Forms.TextBox();
             this.AddFolderPanel = new System.Windows.Forms.TabPage();
+            this.AddFoldDelFromFaveButton = new System.Windows.Forms.Button();
+            this.AddFoldAddToFavButton = new System.Windows.Forms.Button();
             this.DeleteFolderTagTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.clearTagsFolder = new System.Windows.Forms.Button();
@@ -115,8 +117,6 @@
             this.Fave1 = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.AddFoldAddToFavButton = new System.Windows.Forms.Button();
-            this.AddFoldDelFromFaveButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -293,6 +293,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(231, 235);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -550,6 +551,24 @@
             this.AddFolderPanel.Size = new System.Drawing.Size(956, 581);
             this.AddFolderPanel.TabIndex = 2;
             this.AddFolderPanel.Text = "Add Folder";
+            // 
+            // AddFoldDelFromFaveButton
+            // 
+            this.AddFoldDelFromFaveButton.Location = new System.Drawing.Point(269, 480);
+            this.AddFoldDelFromFaveButton.Name = "AddFoldDelFromFaveButton";
+            this.AddFoldDelFromFaveButton.Size = new System.Drawing.Size(134, 23);
+            this.AddFoldDelFromFaveButton.TabIndex = 26;
+            this.AddFoldDelFromFaveButton.Text = "Delete From Favorite";
+            this.AddFoldDelFromFaveButton.UseVisualStyleBackColor = true;
+            // 
+            // AddFoldAddToFavButton
+            // 
+            this.AddFoldAddToFavButton.Location = new System.Drawing.Point(95, 480);
+            this.AddFoldAddToFavButton.Name = "AddFoldAddToFavButton";
+            this.AddFoldAddToFavButton.Size = new System.Drawing.Size(134, 23);
+            this.AddFoldAddToFavButton.TabIndex = 25;
+            this.AddFoldAddToFavButton.Text = "Add To Favorites";
+            this.AddFoldAddToFavButton.UseVisualStyleBackColor = true;
             // 
             // DeleteFolderTagTextBox
             // 
@@ -1066,24 +1085,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // AddFoldAddToFavButton
-            // 
-            this.AddFoldAddToFavButton.Location = new System.Drawing.Point(95, 480);
-            this.AddFoldAddToFavButton.Name = "AddFoldAddToFavButton";
-            this.AddFoldAddToFavButton.Size = new System.Drawing.Size(134, 23);
-            this.AddFoldAddToFavButton.TabIndex = 25;
-            this.AddFoldAddToFavButton.Text = "Add To Favorites";
-            this.AddFoldAddToFavButton.UseVisualStyleBackColor = true;
-            // 
-            // AddFoldDelFromFaveButton
-            // 
-            this.AddFoldDelFromFaveButton.Location = new System.Drawing.Point(269, 480);
-            this.AddFoldDelFromFaveButton.Name = "AddFoldDelFromFaveButton";
-            this.AddFoldDelFromFaveButton.Size = new System.Drawing.Size(134, 23);
-            this.AddFoldDelFromFaveButton.TabIndex = 26;
-            this.AddFoldDelFromFaveButton.Text = "Delete From Favorite";
-            this.AddFoldDelFromFaveButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
