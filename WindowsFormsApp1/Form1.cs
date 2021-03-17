@@ -243,5 +243,10 @@ namespace WindowsFormsApp1
             Form2 form2 = new Form2();
             form2.ShowDialog();
         }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }
