@@ -33,6 +33,56 @@ namespace DeskBooruApp
 
 
         /// Attempt at Implementing the SQLite Commands into Functions for actual use:
+        /// #1:
+        /// 
+        public void image_Path(string userInput)
+        {
+            string query = "SELECT image_path FROM images WHERE ID = @input";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+            myCommand.Parameters.AddWithValue("@input", userInput);
+            var result = myCommand.ExecuteNonQuery();
+            this.CloseConnection();
+        }
+        /// #2:
+        public void check_If_Exists_Tag(string userInputT_Name, string userInput)        //I probably need to look at this one again for how to implement it
+        {
+            string query = "INSERT INTO tags (tag_name, image_count, description)";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+            myCommand.Parameters.AddWithValue("@input", userInput);
+            var result = myCommand.ExecuteNonQuery();
+            this.CloseConnection();
+        }
+
+        public void tag_Count()
+        {
+            string query = "SELECT tag_name, COUNT * FROM tags";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+            var result = myCommand.ExecuteNonQuery();
+            this.CloseConnection();
+        }
+
+        public void all_Tags()
+        {
+            string query = "SELECT * FROM tags";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+            var result = myCommand.ExecuteNonQuery();
+            this.CloseConnection();
+        }
+
+        public void tag_Specific_Count(string userInputTag_Name)
+        {
+            string query = "SELECT * FROM image_tags WHERE tag_id = (SELECT tag_id FROM tags WHERE tag_name = @input)";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+            myCommand.Parameters.AddWithValue("@input", userInputTag_Name);
+            var result = myCommand.ExecuteNonQuery();
+            this.CloseConnection();
+        }
+
         /// #3:
 
         public void favorite_Image(string userInput)
