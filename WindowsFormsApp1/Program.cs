@@ -1,3 +1,4 @@
+using DeskBooruApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace WindowsFormsApp1
         [STAThread]
         static void Main()
         {
+            ///Added Database
+            Database databaseObject = new Database();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
