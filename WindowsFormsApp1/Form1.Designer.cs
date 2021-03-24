@@ -89,6 +89,13 @@
             this.HelpPanelPictureBox = new System.Windows.Forms.PictureBox();
             this.HelpPanelTextBox = new System.Windows.Forms.TextBox();
             this.GalleriesPanel = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -117,13 +124,8 @@
             this.Fave1 = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.SingleImgStatus = new System.Windows.Forms.Label();
+            this.SingleImageStatusColor = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -145,6 +147,10 @@
             this.HelpPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpPanelPictureBox)).BeginInit();
             this.GalleriesPanel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel3.SuspendLayout();
             this.FavoritePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Fave18)).BeginInit();
@@ -165,10 +171,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fave3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fave2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fave1)).BeginInit();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -375,6 +377,8 @@
             // ImageTaggingPanel
             // 
             this.ImageTaggingPanel.BackColor = System.Drawing.Color.DimGray;
+            this.ImageTaggingPanel.Controls.Add(this.SingleImageStatusColor);
+            this.ImageTaggingPanel.Controls.Add(this.SingleImgStatus);
             this.ImageTaggingPanel.Controls.Add(this.AddImagineAddToFavButton);
             this.ImageTaggingPanel.Controls.Add(this.AddImagineDelFromFaveButton);
             this.ImageTaggingPanel.Controls.Add(this.label13);
@@ -469,6 +473,7 @@
             this.SubmitButton.TabIndex = 7;
             this.SubmitButton.Text = "Submit Image";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label4
             // 
@@ -806,6 +811,80 @@
             this.GalleriesPanel.TabIndex = 5;
             this.GalleriesPanel.Text = "Galleries";
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.GrayText;
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox9);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox10);
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox11);
+            this.flowLayoutPanel2.Controls.Add(this.label15);
+            this.flowLayoutPanel2.Controls.Add(this.label17);
+            this.flowLayoutPanel2.Controls.Add(this.label18);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 75);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(968, 506);
+            this.flowLayoutPanel2.TabIndex = 13;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(310, 310);
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(319, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(310, 310);
+            this.pictureBox10.TabIndex = 1;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Location = new System.Drawing.Point(635, 3);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(310, 310);
+            this.pictureBox11.TabIndex = 2;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(3, 316);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(310, 30);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "GalleryName";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(319, 316);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(310, 30);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "GalleryName";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(635, 316);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(310, 30);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "GalleryName";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -1098,81 +1177,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // flowLayoutPanel2
+            // SingleImgStatus
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.GrayText;
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox9);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox10);
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox11);
-            this.flowLayoutPanel2.Controls.Add(this.label15);
-            this.flowLayoutPanel2.Controls.Add(this.label17);
-            this.flowLayoutPanel2.Controls.Add(this.label18);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 75);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(968, 506);
-            this.flowLayoutPanel2.TabIndex = 13;
+            this.SingleImgStatus.AutoSize = true;
+            this.SingleImgStatus.Location = new System.Drawing.Point(691, 14);
+            this.SingleImgStatus.Name = "SingleImgStatus";
+            this.SingleImgStatus.Size = new System.Drawing.Size(42, 15);
+            this.SingleImgStatus.TabIndex = 25;
+            this.SingleImgStatus.Text = "Status:";
             // 
-            // pictureBox9
+            // SingleImageStatusColor
             // 
-            this.pictureBox9.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(310, 310);
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(319, 3);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(310, 310);
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(635, 3);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(310, 310);
-            this.pictureBox11.TabIndex = 2;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(3, 316);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(310, 30);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "GalleryName";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(319, 316);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(310, 30);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "GalleryName";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(635, 316);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(310, 30);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "GalleryName";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.SingleImageStatusColor.BackColor = System.Drawing.SystemColors.GrayText;
+            this.SingleImageStatusColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SingleImageStatusColor.Location = new System.Drawing.Point(741, 14);
+            this.SingleImageStatusColor.Name = "SingleImageStatusColor";
+            this.SingleImageStatusColor.Size = new System.Drawing.Size(144, 16);
+            this.SingleImageStatusColor.TabIndex = 26;
             // 
             // Form1
             // 
@@ -1211,6 +1232,10 @@
             this.HelpPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpPanelPictureBox)).EndInit();
             this.GalleriesPanel.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.FavoritePanel.ResumeLayout(false);
@@ -1232,10 +1257,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fave3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fave2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fave1)).EndInit();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1337,6 +1358,8 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox SingleImageStatusColor;
+        private System.Windows.Forms.Label SingleImgStatus;
     }
 }
 
