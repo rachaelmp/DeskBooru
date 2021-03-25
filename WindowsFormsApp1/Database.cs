@@ -65,6 +65,37 @@ namespace DeskBooruApp
             return ID;
         }
 
+        //inserts all tags currently in the tag box.
+        public int addTags(int imageID,List<string> tags)
+        {
+            int ID = 0;
+            //using an upsert so if function tries to write row that already has a certain tag_name
+            //do nothing
+            this.OpenConnection();
+            using (var transaction = this.myConnection.BeginTransaction())
+            {
+                var command = this.myConnection.CreateCommand();
+                command.CommandText =
+                @"INSERT INTO tags(tag_name) VALUES (@name) ON CONFLICT(tag_name) DO NOTHING;";
+
+                var parameter = command.CreateParameter();
+                parameter.ParameterName = "@name";
+                command.Parameters.Add(parameter);
+
+                // Insert a lot of data
+                var random = new Random();
+                for (var i = 0; i < tags.Count; i++)
+                {
+                    parameter.Value = tags[i];
+                    command.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
+            this.CloseConnection();
+            return 1;
+        }
+
         /// Attempt at Implementing the SQLite Commands into Functions for actual use:
         /// #1:
         /// 

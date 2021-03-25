@@ -265,6 +265,8 @@ namespace WindowsFormsApp1
             //ID will be the ID of the inserted image
             int ID =
             db.insertImage(now, currImage.Width, currImage.Height, aspectRatio, currImage.RawFormat.ToString(), location);
+            //insert all the tags in the currenttags box.
+            db.addTags(ID, GlobalStatics.currentTagsSingle);
 
             //notifies user that the image was added with a green textbox
             AddImageCurrentTagTexBox.Text = ID.ToString();
