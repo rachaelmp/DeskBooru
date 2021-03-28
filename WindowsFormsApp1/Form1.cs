@@ -268,6 +268,9 @@ namespace WindowsFormsApp1
             //insert all the tags in the currenttags box.
             db.addTags(ID, GlobalStatics.currentTagsSingle);
 
+            //now that all tags are in the database, we add our image to tag relation
+            db.add_Tag_Image_relation(ID, GlobalStatics.currentTagsSingle);
+
             //notifies user that the image was added with a green textbox
             AddImageCurrentTagTexBox.Text = ID.ToString();
             SingleImageStatusColor.BackColor = Color.Green;

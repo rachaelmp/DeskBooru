@@ -48,6 +48,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.ImageTaggingPanel = new System.Windows.Forms.TabPage();
+            this.SingleImageStatusColor = new System.Windows.Forms.TextBox();
+            this.SingleImgStatus = new System.Windows.Forms.Label();
             this.AddImagineAddToFavButton = new System.Windows.Forms.Button();
             this.AddImagineDelFromFaveButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -124,8 +126,6 @@
             this.Fave1 = new System.Windows.Forms.PictureBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.SingleImgStatus = new System.Windows.Forms.Label();
-            this.SingleImageStatusColor = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.TabPanel1.SuspendLayout();
@@ -400,6 +400,24 @@
             this.ImageTaggingPanel.Size = new System.Drawing.Size(956, 581);
             this.ImageTaggingPanel.TabIndex = 1;
             this.ImageTaggingPanel.Text = "Add Images";
+            // 
+            // SingleImageStatusColor
+            // 
+            this.SingleImageStatusColor.BackColor = System.Drawing.SystemColors.GrayText;
+            this.SingleImageStatusColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SingleImageStatusColor.Location = new System.Drawing.Point(741, 14);
+            this.SingleImageStatusColor.Name = "SingleImageStatusColor";
+            this.SingleImageStatusColor.Size = new System.Drawing.Size(144, 16);
+            this.SingleImageStatusColor.TabIndex = 26;
+            // 
+            // SingleImgStatus
+            // 
+            this.SingleImgStatus.AutoSize = true;
+            this.SingleImgStatus.Location = new System.Drawing.Point(691, 14);
+            this.SingleImgStatus.Name = "SingleImgStatus";
+            this.SingleImgStatus.Size = new System.Drawing.Size(42, 15);
+            this.SingleImgStatus.TabIndex = 25;
+            this.SingleImgStatus.Text = "Status:";
             // 
             // AddImagineAddToFavButton
             // 
@@ -1176,24 +1194,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // SingleImgStatus
-            // 
-            this.SingleImgStatus.AutoSize = true;
-            this.SingleImgStatus.Location = new System.Drawing.Point(691, 14);
-            this.SingleImgStatus.Name = "SingleImgStatus";
-            this.SingleImgStatus.Size = new System.Drawing.Size(42, 15);
-            this.SingleImgStatus.TabIndex = 25;
-            this.SingleImgStatus.Text = "Status:";
-            // 
-            // SingleImageStatusColor
-            // 
-            this.SingleImageStatusColor.BackColor = System.Drawing.SystemColors.GrayText;
-            this.SingleImageStatusColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SingleImageStatusColor.Location = new System.Drawing.Point(741, 14);
-            this.SingleImageStatusColor.Name = "SingleImageStatusColor";
-            this.SingleImageStatusColor.Size = new System.Drawing.Size(144, 16);
-            this.SingleImageStatusColor.TabIndex = 26;
             // 
             // Form1
             // 

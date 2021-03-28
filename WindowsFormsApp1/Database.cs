@@ -53,6 +53,7 @@ namespace DeskBooruApp
             myCommand.Parameters.AddWithValue("@format", format);
             myCommand.Parameters.AddWithValue("@path", path);
             var result = myCommand.ExecuteNonQuery();
+
             //here we SELECT for the row with that path, should only be one image
             using var commd = new SQLiteCommand("SELECT ID FROM images WHERE image_path = '@path'", this.myConnection);
             commd.Parameters.AddWithValue("@path", path);
@@ -66,9 +67,8 @@ namespace DeskBooruApp
         }
 
         //inserts all tags currently in the tag box.
-        public int addTags(int imageID,List<string> tags)
+        public void addTags(int imageID,List<string> tags)
         {
-            int ID = 0;
             //using an upsert so if function tries to write row that already has a certain tag_name
             //do nothing
             this.OpenConnection();
@@ -93,7 +93,6 @@ namespace DeskBooruApp
                 transaction.Commit();
             }
             this.CloseConnection();
-            return 1;
         }
 
         /// Attempt at Implementing the SQLite Commands into Functions for actual use:
@@ -171,15 +170,31 @@ namespace DeskBooruApp
 
         /// #4:
         /// 
-
-        public void add_Tag_Image(string userInputImg_ID, string userInputTag_ID)
+        //this function takes in an image ID and a list of strings, that ID is associated with each of the tags
+        public void add_Tag_Image_relation(int Img_ID, List<string> tagNameList)
         {
-            string query = "INSERT INTO image_tags (image_id, tag_id) VALUES (@image, @tag)";
-            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
             this.OpenConnection();
-            myCommand.Parameters.AddWithValue("@image", userInputImg_ID);
-            myCommand.Parameters.AddWithValue("@tag", userInputTag_ID);
-            var result = myCommand.ExecuteNonQuery();
+            //we use a transaction because it could be a large amount of INSERTS being made and this is faster
+            using (var transaction = this.myConnection.BeginTransaction())
+            {
+                var command = this.myConnection.CreateCommand();
+                //using a subquery, we switch the tag name for an ID by referencing the DB
+                command.CommandText =
+                "INSERT INTO image_tags (image_id, tag_id) VALUES (@ImgID, (SELECT tag_id FROM tags WHERE tag_name = @tagName));";
+
+                var parameter = command.CreateParameter();
+                parameter.ParameterName = "@tagName";
+                command.Parameters.AddWithValue("@ImgID", Img_ID);
+                command.Parameters.Add(parameter);
+
+                foreach (string item in tagNameList)
+                {
+                    parameter.Value = item;
+                    command.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
             this.CloseConnection();
         }
 
