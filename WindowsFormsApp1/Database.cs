@@ -23,6 +23,11 @@ namespace DeskBooruApp
             }
         }
 
+        public void dispose()
+        {
+            myConnection.Dispose();
+        }
+
         public void CloseConnection()
         {
             if (myConnection.State != System.Data.ConnectionState.Closed)
@@ -31,6 +36,64 @@ namespace DeskBooruApp
             }
         }
 
+        //inserts data and returns the ID of the newly inserted row!
+        public int insertImage(string createdAt, int width, int height, string aspectRatio, string format, string path)
+        {
+            int ID = 0;
+            //using an upsert so if function tries to write row that already has a certain image_path
+            //do nothing!
+            string query = "INSERT INTO images(created_at, image_width, image_height, aspect_ratio, image_format, image_path) " +
+                "VALUES(@createdAt, @width, @height, @Aratio, @format, @path) ON CONFLICT(image_path) DO NOTHING";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+            myCommand.Parameters.AddWithValue("@createdAt", createdAt);
+            myCommand.Parameters.AddWithValue("@width", width);
+            myCommand.Parameters.AddWithValue("@height", height);
+            myCommand.Parameters.AddWithValue("@Aratio", aspectRatio);
+            myCommand.Parameters.AddWithValue("@format", format);
+            myCommand.Parameters.AddWithValue("@path", path);
+            var result = myCommand.ExecuteNonQuery();
+
+            //here we SELECT for the row with that path, should only be one image
+            using var commd = new SQLiteCommand("SELECT ID FROM images WHERE image_path = '@path'", this.myConnection);
+            commd.Parameters.AddWithValue("@path", path);
+            using SQLiteDataReader rdr = commd.ExecuteReader();
+            while(rdr.Read())
+            {
+                ID = rdr.GetInt32(0);
+            }
+            this.CloseConnection();
+            return ID;
+        }
+
+        //inserts all tags currently in the tag box.
+        public void addTags(int imageID,List<string> tags)
+        {
+            //using an upsert so if function tries to write row that already has a certain tag_name
+            //do nothing
+            this.OpenConnection();
+            using (var transaction = this.myConnection.BeginTransaction())
+            {
+                var command = this.myConnection.CreateCommand();
+                command.CommandText =
+                @"INSERT INTO tags(tag_name) VALUES (@name) ON CONFLICT(tag_name) DO NOTHING;";
+
+                var parameter = command.CreateParameter();
+                parameter.ParameterName = "@name";
+                command.Parameters.Add(parameter);
+
+                // Insert a lot of data
+                var random = new Random();
+                for (var i = 0; i < tags.Count; i++)
+                {
+                    parameter.Value = tags[i];
+                    command.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
+            this.CloseConnection();
+        }
 
         /// Attempt at Implementing the SQLite Commands into Functions for actual use:
         /// #1:
@@ -107,15 +170,31 @@ namespace DeskBooruApp
 
         /// #4:
         /// 
-
-        public void add_Tag_Image(string userInputImg_ID, string userInputTag_ID)
+        //this function takes in an image ID and a list of strings, that ID is associated with each of the tags
+        public void add_Tag_Image_relation(int Img_ID, List<string> tagNameList)
         {
-            string query = "INSERT INTO image_tags (image_id, tag_id) VALUES (@image, @tag)";
-            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
             this.OpenConnection();
-            myCommand.Parameters.AddWithValue("@image", userInputImg_ID);
-            myCommand.Parameters.AddWithValue("@tag", userInputTag_ID);
-            var result = myCommand.ExecuteNonQuery();
+            //we use a transaction because it could be a large amount of INSERTS being made and this is faster
+            using (var transaction = this.myConnection.BeginTransaction())
+            {
+                var command = this.myConnection.CreateCommand();
+                //using a subquery, we switch the tag name for an ID by referencing the DB
+                command.CommandText =
+                "INSERT INTO image_tags (image_id, tag_id) VALUES (@ImgID, (SELECT tag_id FROM tags WHERE tag_name = @tagName));";
+
+                var parameter = command.CreateParameter();
+                parameter.ParameterName = "@tagName";
+                command.Parameters.AddWithValue("@ImgID", Img_ID);
+                command.Parameters.Add(parameter);
+
+                foreach (string item in tagNameList)
+                {
+                    parameter.Value = item;
+                    command.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+            }
             this.CloseConnection();
         }
 

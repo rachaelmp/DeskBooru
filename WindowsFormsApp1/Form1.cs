@@ -70,6 +70,13 @@ namespace WindowsFormsApp1
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                //initialize imageArray with singular image and data.
+                //this allows for functions like "submitButtonclick()" to work for both 
+                //the single image page and the folder page
+                GlobalStatics.imageArrayindex = 0;
+                //need to clear the array first to make sure only one image is in the array
+                GlobalStatics.ImageLocations.Clear();
+                GlobalStatics.ImageLocations.Add(openFileDialog1.FileName);
                 ImagePreviewSingle.Image = new Bitmap(openFileDialog1.FileName);
                 ImagePreviewSingle.SizeMode = PictureBoxSizeMode.Zoom;
             }
@@ -242,6 +249,37 @@ namespace WindowsFormsApp1
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            //get location of file from global list
+            string location = GlobalStatics.ImageLocations[GlobalStatics.imageArrayindex];
+            Database db = new Database();
+
+            //gets data for feeding into database function
+            Image currImage = Image.FromFile(location);
+            string now = DateTime.Now.ToString("yyyy-MM-dd.HH:mm:ss");
+            string aspectRatio = $"{currImage.Width}:{currImage.Height}";
+
+            //ID will be the ID of the inserted image
+            int ID =
+            db.insertImage(now, currImage.Width, currImage.Height, aspectRatio, currImage.RawFormat.ToString(), location);
+            //insert all the tags in the currenttags box.
+            db.addTags(ID, GlobalStatics.currentTagsSingle);
+
+            //now that all tags are in the database, we add our image to tag relation
+            db.add_Tag_Image_relation(ID, GlobalStatics.currentTagsSingle);
+
+            //notifies user that the image was added with a green textbox
+            AddImageCurrentTagTexBox.Text = ID.ToString();
+            SingleImageStatusColor.BackColor = Color.Green;
+            SingleImageStatusColor.Text = "Added!";
+
+            //stops memory leaks!
+            db.dispose();
+            currImage.Dispose();
+            
         }
     }
 }
