@@ -126,7 +126,7 @@ namespace DeskBooruApp
             this.OpenConnection();
             var result = myCommand.ExecuteNonQuery();
             this.CloseConnection();
-            return result;
+            return result;   // need to check if this will work
         }
 
         public void all_Tags()
