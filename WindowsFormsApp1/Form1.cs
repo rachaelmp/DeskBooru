@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+
 
 namespace WindowsFormsApp1
 {
@@ -262,10 +264,16 @@ namespace WindowsFormsApp1
             string now = DateTime.Now.ToString("yyyy-MM-dd.HH:mm:ss");
             string aspectRatio = $"{currImage.Width}:{currImage.Height}";
 
+            //gets file name from source location
+            //borrowed from https://stackoverflow.com/questions/4073244/how-to-parse-out-image-name-from-image-url
+            string fileName = Path.GetFileName(@location);
+
             //ID will be the ID of the inserted image
             int ID =
             db.insertImage(now, currImage.Width, currImage.Height, aspectRatio, currImage.RawFormat.ToString(), location);
             //insert all the tags in the currenttags box.
+
+
             db.addTags(ID, GlobalStatics.currentTagsSingle);
 
             //now that all tags are in the database, we add our image to tag relation
@@ -280,6 +288,27 @@ namespace WindowsFormsApp1
             db.dispose();
             currImage.Dispose();
             
+        }
+
+        private void TagListRichTexBox_TextChanged(object sender, EventArgs e)
+        {
+            //Attempting to print tags into textbox
+            string text = " ";
+            Database db = new Database();
+            string query = "Print SELECT * FROM tags";
+            SQLiteCommand myCommand = new SQLiteCommand(query, db.myConnection);
+            db.OpenConnection();
+            var result = myCommand.ExecuteNonQuery();
+            SQLiteDataReader DR1 = myCommand.ExecuteReader();
+            if (DR1.Read())
+            {
+                text += DR1.GetValue(0).ToString();
+                text += "/n";
+            }
+            TagListRichTexBox.Text = text;
+            db.CloseConnection();
+            db.dispose();
+            Application.DoEvents();
         }
     }
 }

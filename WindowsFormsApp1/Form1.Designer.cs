@@ -784,6 +784,7 @@
             this.TagListRichTexBox.Size = new System.Drawing.Size(935, 411);
             this.TagListRichTexBox.TabIndex = 0;
             this.TagListRichTexBox.Text = "Will have a list of tags here soon";
+            this.TagListRichTexBox.TextChanged += new System.EventHandler(this.TagListRichTexBox_TextChanged);
             // 
             // HelpPanel
             // 
