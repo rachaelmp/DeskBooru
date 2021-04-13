@@ -175,7 +175,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 23);
+            this.textBox1.Location = new System.Drawing.Point(183, 21);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 23);
             this.textBox1.TabIndex = 0;
@@ -184,7 +184,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(16, 21);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(108, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 1;
@@ -192,8 +193,12 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(263, 15);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(355, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(36, 36);
             this.button1.TabIndex = 2;
@@ -202,18 +207,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.ForeColor = System.Drawing.SystemColors.Control;
+            this.panel1.Location = new System.Drawing.Point(59, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(972, 78);
+            this.panel1.Size = new System.Drawing.Size(876, 78);
             this.panel1.TabIndex = 3;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(2, 2);
@@ -223,6 +231,7 @@
             // 
             // label10
             // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.Window;
             this.label10.Location = new System.Drawing.Point(10, 134);
@@ -233,6 +242,7 @@
             // 
             // label9
             // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.Window;
             this.label9.Location = new System.Drawing.Point(10, 24);
@@ -260,6 +270,7 @@
             // SearchPanel
             // 
             this.SearchPanel.BackColor = System.Drawing.Color.DimGray;
+            this.SearchPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchPanel.BackgroundImage")));
             this.SearchPanel.Controls.Add(this.flowLayoutPanel1);
             this.SearchPanel.Controls.Add(this.panel1);
             this.SearchPanel.Location = new System.Drawing.Point(4, 24);
@@ -271,7 +282,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
@@ -280,9 +291,9 @@
             this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox6);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox7);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 75);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(69, 75);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(968, 506);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(866, 506);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // pictureBox1
@@ -292,7 +303,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -301,9 +312,9 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(240, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(209, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -313,9 +324,9 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(477, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(415, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox3.Size = new System.Drawing.Size(200, 200);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
@@ -324,9 +335,9 @@
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(714, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(621, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox4.Size = new System.Drawing.Size(200, 200);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -335,9 +346,9 @@
             this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 244);
+            this.pictureBox8.Location = new System.Drawing.Point(3, 209);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox8.Size = new System.Drawing.Size(200, 200);
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
             // 
@@ -346,9 +357,9 @@
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(240, 244);
+            this.pictureBox5.Location = new System.Drawing.Point(209, 209);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox5.Size = new System.Drawing.Size(200, 200);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
@@ -357,9 +368,9 @@
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(477, 244);
+            this.pictureBox6.Location = new System.Drawing.Point(415, 209);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox6.Size = new System.Drawing.Size(200, 200);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             // 
@@ -368,15 +379,16 @@
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(714, 244);
+            this.pictureBox7.Location = new System.Drawing.Point(621, 209);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(231, 235);
+            this.pictureBox7.Size = new System.Drawing.Size(200, 200);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             // 
             // ImageTaggingPanel
             // 
             this.ImageTaggingPanel.BackColor = System.Drawing.Color.DimGray;
+            this.ImageTaggingPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageTaggingPanel.BackgroundImage")));
             this.ImageTaggingPanel.Controls.Add(this.SingleImageStatusColor);
             this.ImageTaggingPanel.Controls.Add(this.SingleImgStatus);
             this.ImageTaggingPanel.Controls.Add(this.AddImagineAddToFavButton);
@@ -413,6 +425,8 @@
             // SingleImgStatus
             // 
             this.SingleImgStatus.AutoSize = true;
+            this.SingleImgStatus.BackColor = System.Drawing.Color.Transparent;
+            this.SingleImgStatus.ForeColor = System.Drawing.SystemColors.Control;
             this.SingleImgStatus.Location = new System.Drawing.Point(691, 14);
             this.SingleImgStatus.Name = "SingleImgStatus";
             this.SingleImgStatus.Size = new System.Drawing.Size(42, 15);
@@ -421,6 +435,10 @@
             // 
             // AddImagineAddToFavButton
             // 
+            this.AddImagineAddToFavButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddImagineAddToFavButton.BackgroundImage")));
+            this.AddImagineAddToFavButton.FlatAppearance.BorderSize = 0;
+            this.AddImagineAddToFavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddImagineAddToFavButton.ForeColor = System.Drawing.SystemColors.Control;
             this.AddImagineAddToFavButton.Location = new System.Drawing.Point(630, 544);
             this.AddImagineAddToFavButton.Name = "AddImagineAddToFavButton";
             this.AddImagineAddToFavButton.Size = new System.Drawing.Size(134, 23);
@@ -430,6 +448,10 @@
             // 
             // AddImagineDelFromFaveButton
             // 
+            this.AddImagineDelFromFaveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddImagineDelFromFaveButton.BackgroundImage")));
+            this.AddImagineDelFromFaveButton.FlatAppearance.BorderSize = 0;
+            this.AddImagineDelFromFaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddImagineDelFromFaveButton.ForeColor = System.Drawing.SystemColors.Control;
             this.AddImagineDelFromFaveButton.Location = new System.Drawing.Point(796, 544);
             this.AddImagineDelFromFaveButton.Name = "AddImagineDelFromFaveButton";
             this.AddImagineDelFromFaveButton.Size = new System.Drawing.Size(134, 23);
@@ -440,7 +462,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 339);
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Location = new System.Drawing.Point(77, 317);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(61, 15);
             this.label13.TabIndex = 22;
@@ -448,7 +472,7 @@
             // 
             // AddImageDeleteTagTextBox
             // 
-            this.AddImageDeleteTagTextBox.Location = new System.Drawing.Point(95, 336);
+            this.AddImageDeleteTagTextBox.Location = new System.Drawing.Point(95, 335);
             this.AddImageDeleteTagTextBox.Name = "AddImageDeleteTagTextBox";
             this.AddImageDeleteTagTextBox.PlaceholderText = "Write a tag here to delete";
             this.AddImageDeleteTagTextBox.Size = new System.Drawing.Size(192, 23);
@@ -456,6 +480,10 @@
             // 
             // clearTagsSingleButton
             // 
+            this.clearTagsSingleButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clearTagsSingleButton.BackgroundImage")));
+            this.clearTagsSingleButton.FlatAppearance.BorderSize = 0;
+            this.clearTagsSingleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearTagsSingleButton.ForeColor = System.Drawing.SystemColors.Control;
             this.clearTagsSingleButton.Location = new System.Drawing.Point(295, 335);
             this.clearTagsSingleButton.Name = "clearTagsSingleButton";
             this.clearTagsSingleButton.Size = new System.Drawing.Size(75, 23);
@@ -467,6 +495,8 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
             this.label12.Location = new System.Drawing.Point(579, 14);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 15);
@@ -475,7 +505,11 @@
             // 
             // AddImagesAddButton
             // 
-            this.AddImagesAddButton.Location = new System.Drawing.Point(295, 294);
+            this.AddImagesAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddImagesAddButton.BackgroundImage")));
+            this.AddImagesAddButton.FlatAppearance.BorderSize = 0;
+            this.AddImagesAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddImagesAddButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddImagesAddButton.Location = new System.Drawing.Point(295, 289);
             this.AddImagesAddButton.Name = "AddImagesAddButton";
             this.AddImagesAddButton.Size = new System.Drawing.Size(75, 23);
             this.AddImagesAddButton.TabIndex = 8;
@@ -485,6 +519,10 @@
             // 
             // SubmitButton
             // 
+            this.SubmitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SubmitButton.BackgroundImage")));
+            this.SubmitButton.FlatAppearance.BorderSize = 0;
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitButton.ForeColor = System.Drawing.SystemColors.Control;
             this.SubmitButton.Location = new System.Drawing.Point(267, 480);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(103, 23);
@@ -496,7 +534,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 42);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(77, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 15);
             this.label4.TabIndex = 6;
@@ -504,6 +544,10 @@
             // 
             // BrowseImageButton
             // 
+            this.BrowseImageButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BrowseImageButton.BackgroundImage")));
+            this.BrowseImageButton.FlatAppearance.BorderSize = 0;
+            this.BrowseImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BrowseImageButton.ForeColor = System.Drawing.SystemColors.Control;
             this.BrowseImageButton.Location = new System.Drawing.Point(95, 38);
             this.BrowseImageButton.Name = "BrowseImageButton";
             this.BrowseImageButton.Size = new System.Drawing.Size(75, 23);
@@ -524,7 +568,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 385);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(77, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 15);
             this.label3.TabIndex = 3;
@@ -533,7 +579,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 297);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(77, 272);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 2;
@@ -541,7 +589,7 @@
             // 
             // AddImageAddTagTextBox
             // 
-            this.AddImageAddTagTextBox.Location = new System.Drawing.Point(95, 294);
+            this.AddImageAddTagTextBox.Location = new System.Drawing.Point(95, 290);
             this.AddImageAddTagTextBox.Name = "AddImageAddTagTextBox";
             this.AddImageAddTagTextBox.PlaceholderText = "Write a tag here to add";
             this.AddImageAddTagTextBox.Size = new System.Drawing.Size(195, 23);
@@ -560,7 +608,8 @@
             // 
             // AddFolderPanel
             // 
-            this.AddFolderPanel.BackColor = System.Drawing.Color.DimGray;
+            this.AddFolderPanel.BackColor = System.Drawing.Color.Transparent;
+            this.AddFolderPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddFolderPanel.BackgroundImage")));
             this.AddFolderPanel.Controls.Add(this.AddFoldDelFromFaveButton);
             this.AddFolderPanel.Controls.Add(this.AddFoldAddToFavButton);
             this.AddFolderPanel.Controls.Add(this.DeleteFolderTagTextBox);
@@ -580,6 +629,7 @@
             this.AddFolderPanel.Controls.Add(this.AddFolderAddTagTextBox);
             this.AddFolderPanel.Controls.Add(this.AddFolderCurrentTagTextBox);
             this.AddFolderPanel.Controls.Add(this.AddFolderPictureBox);
+            this.AddFolderPanel.ForeColor = System.Drawing.SystemColors.Control;
             this.AddFolderPanel.Location = new System.Drawing.Point(4, 24);
             this.AddFolderPanel.Name = "AddFolderPanel";
             this.AddFolderPanel.Size = new System.Drawing.Size(956, 581);
@@ -588,6 +638,9 @@
             // 
             // AddFoldDelFromFaveButton
             // 
+            this.AddFoldDelFromFaveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddFoldDelFromFaveButton.BackgroundImage")));
+            this.AddFoldDelFromFaveButton.FlatAppearance.BorderSize = 0;
+            this.AddFoldDelFromFaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddFoldDelFromFaveButton.Location = new System.Drawing.Point(269, 480);
             this.AddFoldDelFromFaveButton.Name = "AddFoldDelFromFaveButton";
             this.AddFoldDelFromFaveButton.Size = new System.Drawing.Size(134, 23);
@@ -597,6 +650,9 @@
             // 
             // AddFoldAddToFavButton
             // 
+            this.AddFoldAddToFavButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddFoldAddToFavButton.BackgroundImage")));
+            this.AddFoldAddToFavButton.FlatAppearance.BorderSize = 0;
+            this.AddFoldAddToFavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddFoldAddToFavButton.Location = new System.Drawing.Point(95, 480);
             this.AddFoldAddToFavButton.Name = "AddFoldAddToFavButton";
             this.AddFoldAddToFavButton.Size = new System.Drawing.Size(134, 23);
@@ -615,7 +671,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 339);
+            this.label14.Location = new System.Drawing.Point(77, 317);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(61, 15);
             this.label14.TabIndex = 22;
@@ -623,6 +679,9 @@
             // 
             // clearTagsFolder
             // 
+            this.clearTagsFolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clearTagsFolder.BackgroundImage")));
+            this.clearTagsFolder.FlatAppearance.BorderSize = 0;
+            this.clearTagsFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearTagsFolder.Location = new System.Drawing.Point(295, 335);
             this.clearTagsFolder.Name = "clearTagsFolder";
             this.clearTagsFolder.Size = new System.Drawing.Size(75, 23);
@@ -633,7 +692,10 @@
             // 
             // forwardButtonFolder
             // 
+            this.forwardButtonFolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("forwardButtonFolder.BackgroundImage")));
             this.forwardButtonFolder.Enabled = false;
+            this.forwardButtonFolder.FlatAppearance.BorderSize = 0;
+            this.forwardButtonFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.forwardButtonFolder.Location = new System.Drawing.Point(787, 544);
             this.forwardButtonFolder.Name = "forwardButtonFolder";
             this.forwardButtonFolder.Size = new System.Drawing.Size(75, 23);
@@ -644,7 +706,10 @@
             // 
             // backButtonFolder
             // 
+            this.backButtonFolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backButtonFolder.BackgroundImage")));
             this.backButtonFolder.Enabled = false;
+            this.backButtonFolder.FlatAppearance.BorderSize = 0;
+            this.backButtonFolder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButtonFolder.Location = new System.Drawing.Point(706, 544);
             this.backButtonFolder.Name = "backButtonFolder";
             this.backButtonFolder.Size = new System.Drawing.Size(75, 23);
@@ -664,7 +729,10 @@
             // 
             // AddFolderAddButton
             // 
-            this.AddFolderAddButton.Location = new System.Drawing.Point(295, 294);
+            this.AddFolderAddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddFolderAddButton.BackgroundImage")));
+            this.AddFolderAddButton.FlatAppearance.BorderSize = 0;
+            this.AddFolderAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddFolderAddButton.Location = new System.Drawing.Point(295, 289);
             this.AddFolderAddButton.Name = "AddFolderAddButton";
             this.AddFolderAddButton.Size = new System.Drawing.Size(75, 23);
             this.AddFolderAddButton.TabIndex = 17;
@@ -675,7 +743,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 76);
+            this.label8.Location = new System.Drawing.Point(80, 64);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 15);
             this.label8.TabIndex = 16;
@@ -683,7 +751,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(97, 76);
+            this.textBox6.Location = new System.Drawing.Point(95, 82);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.PlaceholderText = "Place tags here to apply them to every single image in the selected folder";
@@ -692,6 +760,9 @@
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(440, 480);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 23);
@@ -702,7 +773,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 42);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(77, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 15);
             this.label5.TabIndex = 13;
@@ -710,6 +783,10 @@
             // 
             // button4
             // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Location = new System.Drawing.Point(95, 38);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
@@ -721,7 +798,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 385);
+            this.label6.Location = new System.Drawing.Point(77, 367);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 15);
             this.label6.TabIndex = 11;
@@ -730,7 +807,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(39, 298);
+            this.label7.Location = new System.Drawing.Point(77, 272);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 15);
             this.label7.TabIndex = 10;
@@ -739,7 +816,7 @@
             // AddFolderAddTagTextBox
             // 
             this.AddFolderAddTagTextBox.AcceptsReturn = true;
-            this.AddFolderAddTagTextBox.Location = new System.Drawing.Point(95, 294);
+            this.AddFolderAddTagTextBox.Location = new System.Drawing.Point(95, 290);
             this.AddFolderAddTagTextBox.Name = "AddFolderAddTagTextBox";
             this.AddFolderAddTagTextBox.PlaceholderText = "Write a tag here to add";
             this.AddFolderAddTagTextBox.Size = new System.Drawing.Size(195, 23);
@@ -768,6 +845,7 @@
             // TagListPanel
             // 
             this.TagListPanel.BackColor = System.Drawing.Color.DimGray;
+            this.TagListPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TagListPanel.BackgroundImage")));
             this.TagListPanel.Controls.Add(this.TagListRichTexBox);
             this.TagListPanel.Location = new System.Drawing.Point(4, 24);
             this.TagListPanel.Name = "TagListPanel";
@@ -778,16 +856,17 @@
             // 
             // TagListRichTexBox
             // 
-            this.TagListRichTexBox.Location = new System.Drawing.Point(10, 5);
+            this.TagListRichTexBox.Location = new System.Drawing.Point(60, 5);
             this.TagListRichTexBox.Name = "TagListRichTexBox";
             this.TagListRichTexBox.ReadOnly = true;
-            this.TagListRichTexBox.Size = new System.Drawing.Size(935, 411);
+            this.TagListRichTexBox.Size = new System.Drawing.Size(877, 411);
             this.TagListRichTexBox.TabIndex = 0;
             this.TagListRichTexBox.Text = "Will have a list of tags here soon";
             // 
             // HelpPanel
             // 
             this.HelpPanel.BackColor = System.Drawing.Color.DimGray;
+            this.HelpPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HelpPanel.BackgroundImage")));
             this.HelpPanel.Controls.Add(this.HelpPanelPictureBox);
             this.HelpPanel.Controls.Add(this.HelpPanelTextBox);
             this.HelpPanel.Location = new System.Drawing.Point(4, 24);
@@ -809,17 +888,18 @@
             // HelpPanelTextBox
             // 
             this.HelpPanelTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HelpPanelTextBox.Location = new System.Drawing.Point(27, 25);
+            this.HelpPanelTextBox.Location = new System.Drawing.Point(63, 25);
             this.HelpPanelTextBox.Multiline = true;
             this.HelpPanelTextBox.Name = "HelpPanelTextBox";
             this.HelpPanelTextBox.ReadOnly = true;
-            this.HelpPanelTextBox.Size = new System.Drawing.Size(903, 535);
+            this.HelpPanelTextBox.Size = new System.Drawing.Size(867, 535);
             this.HelpPanelTextBox.TabIndex = 0;
             this.HelpPanelTextBox.Text = resources.GetString("HelpPanelTextBox.Text");
             // 
             // GalleriesPanel
             // 
             this.GalleriesPanel.BackColor = System.Drawing.Color.DimGray;
+            this.GalleriesPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GalleriesPanel.BackgroundImage")));
             this.GalleriesPanel.Controls.Add(this.flowLayoutPanel2);
             this.GalleriesPanel.Controls.Add(this.panel3);
             this.GalleriesPanel.Location = new System.Drawing.Point(4, 24);
@@ -831,16 +911,16 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.SystemColors.GrayText;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel2.Controls.Add(this.pictureBox9);
             this.flowLayoutPanel2.Controls.Add(this.pictureBox10);
             this.flowLayoutPanel2.Controls.Add(this.pictureBox11);
             this.flowLayoutPanel2.Controls.Add(this.label15);
             this.flowLayoutPanel2.Controls.Add(this.label17);
             this.flowLayoutPanel2.Controls.Add(this.label18);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 75);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(59, 75);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(968, 506);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(844, 506);
             this.flowLayoutPanel2.TabIndex = 13;
             // 
             // pictureBox9
@@ -849,7 +929,7 @@
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(3, 3);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(310, 310);
+            this.pictureBox9.Size = new System.Drawing.Size(275, 275);
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
             // 
@@ -857,9 +937,9 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(319, 3);
+            this.pictureBox10.Location = new System.Drawing.Point(284, 3);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(310, 310);
+            this.pictureBox10.Size = new System.Drawing.Size(275, 275);
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
             // 
@@ -867,18 +947,19 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(635, 3);
+            this.pictureBox11.Location = new System.Drawing.Point(565, 3);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(310, 310);
+            this.pictureBox11.Size = new System.Drawing.Size(275, 275);
             this.pictureBox11.TabIndex = 2;
             this.pictureBox11.TabStop = false;
             // 
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(3, 316);
+            this.label15.ForeColor = System.Drawing.SystemColors.Control;
+            this.label15.Location = new System.Drawing.Point(3, 281);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(310, 30);
+            this.label15.Size = new System.Drawing.Size(275, 30);
             this.label15.TabIndex = 3;
             this.label15.Text = "GalleryName";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -886,9 +967,10 @@
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(319, 316);
+            this.label17.ForeColor = System.Drawing.SystemColors.Control;
+            this.label17.Location = new System.Drawing.Point(284, 281);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(310, 30);
+            this.label17.Size = new System.Drawing.Size(275, 30);
             this.label17.TabIndex = 4;
             this.label17.Text = "GalleryName";
             this.label17.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -896,23 +978,24 @@
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(635, 316);
+            this.label18.ForeColor = System.Drawing.SystemColors.Control;
+            this.label18.Location = new System.Drawing.Point(565, 281);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(310, 30);
+            this.label18.Size = new System.Drawing.Size(275, 30);
             this.label18.TabIndex = 5;
             this.label18.Text = "GalleryName";
             this.label18.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(59, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(972, 78);
+            this.panel3.Size = new System.Drawing.Size(916, 78);
             this.panel3.TabIndex = 12;
             // 
             // comboBox1
@@ -934,6 +1017,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.SystemColors.Control;
             this.label16.Location = new System.Drawing.Point(16, 21);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 25);
@@ -942,7 +1026,11 @@
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.SystemColors.Control;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(263, 15);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(36, 36);
@@ -960,6 +1048,7 @@
             // FavoritePanel
             // 
             this.FavoritePanel.BackColor = System.Drawing.Color.DimGray;
+            this.FavoritePanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FavoritePanel.BackgroundImage")));
             this.FavoritePanel.Controls.Add(this.FaveForwardButton);
             this.FavoritePanel.Controls.Add(this.FaveBackButton);
             this.FavoritePanel.Controls.Add(this.Fave18);
@@ -989,6 +1078,10 @@
             // 
             // FaveForwardButton
             // 
+            this.FaveForwardButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FaveForwardButton.BackgroundImage")));
+            this.FaveForwardButton.FlatAppearance.BorderSize = 0;
+            this.FaveForwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FaveForwardButton.ForeColor = System.Drawing.SystemColors.Control;
             this.FaveForwardButton.Location = new System.Drawing.Point(492, 526);
             this.FaveForwardButton.Name = "FaveForwardButton";
             this.FaveForwardButton.Size = new System.Drawing.Size(107, 30);
@@ -998,6 +1091,10 @@
             // 
             // FaveBackButton
             // 
+            this.FaveBackButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FaveBackButton.BackgroundImage")));
+            this.FaveBackButton.FlatAppearance.BorderSize = 0;
+            this.FaveBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FaveBackButton.ForeColor = System.Drawing.SystemColors.Control;
             this.FaveBackButton.Location = new System.Drawing.Point(364, 526);
             this.FaveBackButton.Name = "FaveBackButton";
             this.FaveBackButton.Size = new System.Drawing.Size(107, 30);
@@ -1201,9 +1298,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1154, 623);
             this.Controls.Add(this.TabPanel1);
             this.Controls.Add(this.panel2);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "DeskBooru";
