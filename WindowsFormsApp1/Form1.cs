@@ -280,7 +280,6 @@ namespace WindowsFormsApp1
             db.add_Tag_Image_relation(ID, GlobalStatics.currentTagsSingle);
 
             //notifies user that the image was added with a green textbox
-            AddImageCurrentTagTexBox.Text = ID.ToString();
             SingleImageStatusColor.BackColor = Color.Green;
             SingleImageStatusColor.Text = "Added!";
 
