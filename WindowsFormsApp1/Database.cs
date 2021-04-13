@@ -185,7 +185,7 @@ namespace DeskBooruApp
                 var command = this.myConnection.CreateCommand();
                 //using a subquery, we switch the tag name for an ID by referencing the DB
                 command.CommandText =
-                "INSERT INTO image_tags (image_id, tag_id) VALUES (@ImgID, (SELECT tag_id FROM tags WHERE tag_name = @tagName));";
+                "INSERT OR IGNORE INTO image_tags (image_id, tag_id) VALUES (@ImgID, (SELECT tag_id FROM tags WHERE tag_name = @tagName));";
 
                 var parameter = command.CreateParameter();
                 parameter.ParameterName = "@tagName";
