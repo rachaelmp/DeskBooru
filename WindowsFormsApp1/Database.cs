@@ -43,7 +43,7 @@ namespace DeskBooruApp
             //using an upsert so if function tries to write row that already has a certain image_path
             //do nothing!
             string query = "INSERT INTO images(created_at, image_width, image_height, aspect_ratio, image_format, image_path) " +
-                "VALUES(@createdAt, @width, @height, @Aratio, @format, @path) ON CONFLICT(image_path) DO NOTHING";
+                "VALUES(@createdAt, @width, @height, @Aratio, @format, @path) ON CONFLICT (image_path) DO NOTHING;";
             SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
             this.OpenConnection();
             myCommand.Parameters.AddWithValue("@createdAt", createdAt);
@@ -52,15 +52,18 @@ namespace DeskBooruApp
             myCommand.Parameters.AddWithValue("@Aratio", aspectRatio);
             myCommand.Parameters.AddWithValue("@format", format);
             myCommand.Parameters.AddWithValue("@path", path);
+
             var result = myCommand.ExecuteNonQuery();
 
             //here we SELECT for the row with that path, should only be one image
-            using var commd = new SQLiteCommand("SELECT ID FROM images WHERE image_path = '@path'", this.myConnection);
+            using var commd = new SQLiteCommand("SELECT ID FROM images WHERE image_path = @path", this.myConnection);
             commd.Parameters.AddWithValue("@path", path);
+
             using SQLiteDataReader rdr = commd.ExecuteReader();
             while(rdr.Read())
             {
                 ID = rdr.GetInt32(0);
+                
             }
             this.CloseConnection();
             return ID;
@@ -131,7 +134,7 @@ namespace DeskBooruApp
 
         public void all_Tags()
         {
-            string query = "SELECT * FROM tags";
+            string query = "Print SELECT * FROM tags";
             SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
             this.OpenConnection();
             var result = myCommand.ExecuteNonQuery();
@@ -182,7 +185,7 @@ namespace DeskBooruApp
                 var command = this.myConnection.CreateCommand();
                 //using a subquery, we switch the tag name for an ID by referencing the DB
                 command.CommandText =
-                "INSERT INTO image_tags (image_id, tag_id) VALUES (@ImgID, (SELECT tag_id FROM tags WHERE tag_name = @tagName));";
+                "INSERT OR IGNORE INTO image_tags (image_id, tag_id) VALUES (@ImgID, (SELECT tag_id FROM tags WHERE tag_name = @tagName));";
 
                 var parameter = command.CreateParameter();
                 parameter.ParameterName = "@tagName";
