@@ -118,13 +118,15 @@ namespace DeskBooruApp
             this.CloseConnection();
         }
 
-        public void tag_Count()
+        // Changed void to int so it can return tag_Count - KC
+        public int tag_Count()
         {
             string query = "SELECT tag_name, COUNT * FROM tags";
             SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
             this.OpenConnection();
             var result = myCommand.ExecuteNonQuery();
             this.CloseConnection();
+            return result;   // need to check if this will work
         }
 
         public void all_Tags()
@@ -213,7 +215,8 @@ namespace DeskBooruApp
             this.CloseConnection();
         }
 
-        public void add_Img_To_Gallery(string userInputImg_ID, string userInputG_Name)
+        // Changed string userInputImg_ID to int userInputImg_ID - KC
+        public void add_Img_To_Gallery(int userInputImg_ID, string userInputG_Name)
         {
             string query = "INSERT INTO image_gallery (image_id, gallery_id, date_added) VALUES(@img_id, (SELECT id FROM gallery WHERE title = @g_name), @date)";
             SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
@@ -225,7 +228,8 @@ namespace DeskBooruApp
             this.CloseConnection();
         }
 
-        public void get_All_Img_In_Gal(string userInputG_ID)
+        // Changed string userInputG_ID to int userInputG_ID - KC
+        public void get_All_Img_In_Gal(int userInputG_ID)
         {
             string query = "SELECT * FROM image_gallery WHERE gallery_id = @g_id";
             SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
@@ -244,7 +248,8 @@ namespace DeskBooruApp
             this.CloseConnection();
         }
 
-        public void gallery_Info(string userInputG_ID)
+        // Changed string userInputG_ID to int userInputG_ID - KC
+        public void gallery_Info(int userInputG_ID)
         {
             string query = "SELECT * FROM gallery WHERE id = @g_id";
             SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
