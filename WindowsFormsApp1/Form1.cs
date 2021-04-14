@@ -322,18 +322,40 @@ namespace WindowsFormsApp1
             //turns search string into a list
             List<string> tags = searchTextBox.Text.Split(", ").ToList();
             List<string> imageLocations = db.image_search(tags);
-            for (int i = 0; i < imageLocations.Count && i < 9; i++)
+            for (int i = 0; i < 8; i++)
             {
-                //sets the new image for picturebox
-                boxes[i].ImageLocation = imageLocations[i];
-                boxes[i].SizeMode = PictureBoxSizeMode.Zoom;
-                //load a default background so it doesnt ruin the aesthetic
-                boxes[i].BackgroundImage = DeskBooruApp.Properties.Resources.DarkGradient;
-                //refresh to make sure it loads everything!
-                boxes[i].Refresh();
+                if (i < imageLocations.Count)
+                {
+                    //sets the new image for picturebox
+                    boxes[i].ImageLocation = imageLocations[i];
+                    boxes[i].SizeMode = PictureBoxSizeMode.Zoom;
+                    //load a default background so it doesnt ruin the aesthetic
+                    boxes[i].BackgroundImage = DeskBooruApp.Properties.Resources.DarkGradient;
+                    //refresh to make sure it loads everything!
+                    boxes[i].Refresh();
+                }
+                else
+                {
+                    boxes[i].Image = null;
+                    boxes[i].BackgroundImage = DeskBooruApp.Properties.Resources.DarkGradient;
+                    //refresh to make sure it loads everything!
+                    boxes[i].Refresh();
+                }
 
             }
 
+        }
+
+        //when user presses enter in textbox, search button is triggered
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                SearchButton_Click(sender, e);
+                //these two functions prevent windows from making a "DING" when the enter button is pressed
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
