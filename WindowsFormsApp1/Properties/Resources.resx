@@ -118,65 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="IMG_2074" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_2074.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beach2Fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beach2Fixed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_0464" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_0464.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_2500" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_2500.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_0719" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_0719.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_2809" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_2809.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_1638" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_1638.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_0395" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_0395.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_0788" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_0788.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_1739" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_1739.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DarkGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DarkGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMG_1610" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cat Pictures\IMG_1610.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UFMS5628" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\UFMS5628.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_E2661" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_E2661.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_0831" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_0831.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cameraEx" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cameraEx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beach1Fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beach1Fixed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG_1603" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cat Pictures\IMG_1603.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_3298" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_3298.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_07881" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_0788.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_1004" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cat Pictures\IMG_1004.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMG_0784" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cat Pictures\IMG_0784.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +136,14 @@
   <data name="IMG_3291" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cat Pictures\IMG_3291.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DarkGradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DarkGradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IMG_E2661" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_E2661.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_1739" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_1739.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG_TagList" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_TagList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG_Favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG_Favorites.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,19 +151,67 @@
   <data name="BG_FolderUpload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG_FolderUpload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG_Galleries" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG_Galleries.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="beach1Fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beach1Fixed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG_Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG_Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IMG_2074" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_2074.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_0719" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_0719.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_0464" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_0464.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_0831" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_0831.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beach2Fixed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beach2Fixed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_3298" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_3298.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_0395" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_0395.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UFMS5628" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\UFMS5628.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BG_ImageSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG_ImageSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BG_Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_1004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_1004.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_1638" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_1638.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_07881" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_0788.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_2500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_2500.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_0788" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_0788.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BG_Galleries" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BG_Galleries.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BG_ImageUpload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG_ImageUpload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BG_TagList" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BG_TagList.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cameraEx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cameraEx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_2809" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cat Pictures\IMG_2809.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="noImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

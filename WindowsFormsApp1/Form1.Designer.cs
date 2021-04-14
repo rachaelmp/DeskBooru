@@ -295,48 +295,56 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(209, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(415, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(621, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox8
             // 
@@ -346,9 +354,10 @@
             this.pictureBox8.Location = new System.Drawing.Point(3, 209);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.pictureBox8.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox5
             // 
@@ -358,9 +367,10 @@
             this.pictureBox5.Location = new System.Drawing.Point(209, 209);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox6
             // 
@@ -370,9 +380,10 @@
             this.pictureBox6.Location = new System.Drawing.Point(415, 209);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pictureBox6.Click += new System.EventHandler(this.pictureClicked);
             // 
             // pictureBox7
             // 
@@ -382,9 +393,10 @@
             this.pictureBox7.Location = new System.Drawing.Point(621, 209);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pictureBox7.Click += new System.EventHandler(this.pictureClicked);
             // 
             // ImageTaggingPanel
             // 
@@ -560,9 +572,10 @@
             // ImagePreviewSingle
             // 
             this.ImagePreviewSingle.BackColor = System.Drawing.Color.White;
+            this.ImagePreviewSingle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ImagePreviewSingle.Location = new System.Drawing.Point(579, 38);
             this.ImagePreviewSingle.Name = "ImagePreviewSingle";
-            this.ImagePreviewSingle.Size = new System.Drawing.Size(377, 500);
+            this.ImagePreviewSingle.Size = new System.Drawing.Size(363, 500);
             this.ImagePreviewSingle.TabIndex = 4;
             this.ImagePreviewSingle.TabStop = false;
             // 
@@ -928,30 +941,36 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(3, 3);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(275, 275);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(284, 3);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(275, 275);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
             // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(565, 3);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(275, 275);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 2;
             this.pictureBox11.TabStop = false;
             // 
@@ -1078,24 +1097,26 @@
             // Fave11
             // 
             this.Fave11.BackColor = System.Drawing.Color.White;
+            this.Fave11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave11.BackgroundImage")));
             this.Fave11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave11.Location = new System.Drawing.Point(451, 353);
             this.Fave11.Name = "Fave11";
             this.Fave11.Size = new System.Drawing.Size(138, 144);
             this.Fave11.TabIndex = 21;
             this.Fave11.TabStop = false;
-            this.Fave11.Click += new System.EventHandler(this.Fave11_Click);
+            this.Fave11.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave12
             // 
             this.Fave12.BackColor = System.Drawing.Color.White;
+            this.Fave12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave12.BackgroundImage")));
             this.Fave12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave12.Location = new System.Drawing.Point(285, 353);
             this.Fave12.Name = "Fave12";
             this.Fave12.Size = new System.Drawing.Size(138, 144);
             this.Fave12.TabIndex = 20;
             this.Fave12.TabStop = false;
-            this.Fave12.Click += new System.EventHandler(this.Fave12_Click);
+            this.Fave12.Click += new System.EventHandler(this.pictureClicked);
             // 
             // FaveForwardButton
             // 
@@ -1126,79 +1147,86 @@
             // Fave10
             // 
             this.Fave10.BackColor = System.Drawing.Color.White;
+            this.Fave10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave10.BackgroundImage")));
             this.Fave10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave10.Location = new System.Drawing.Point(618, 194);
             this.Fave10.Name = "Fave10";
             this.Fave10.Size = new System.Drawing.Size(138, 144);
             this.Fave10.TabIndex = 12;
             this.Fave10.TabStop = false;
-            this.Fave10.Click += new System.EventHandler(this.Fave10_Click);
+            this.Fave10.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave15
             // 
             this.Fave15.BackColor = System.Drawing.Color.White;
+            this.Fave15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave15.BackgroundImage")));
             this.Fave15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave15.Location = new System.Drawing.Point(778, 353);
             this.Fave15.Name = "Fave15";
             this.Fave15.Size = new System.Drawing.Size(138, 144);
             this.Fave15.TabIndex = 11;
             this.Fave15.TabStop = false;
-            this.Fave15.Click += new System.EventHandler(this.Fave15_Click);
+            this.Fave15.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave9
             // 
             this.Fave9.BackColor = System.Drawing.Color.White;
+            this.Fave9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave9.BackgroundImage")));
             this.Fave9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave9.Location = new System.Drawing.Point(451, 194);
             this.Fave9.Name = "Fave9";
             this.Fave9.Size = new System.Drawing.Size(138, 144);
             this.Fave9.TabIndex = 10;
             this.Fave9.TabStop = false;
-            this.Fave9.Click += new System.EventHandler(this.Fave9_Click);
+            this.Fave9.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave14
             // 
             this.Fave14.BackColor = System.Drawing.Color.White;
+            this.Fave14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave14.BackgroundImage")));
             this.Fave14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave14.Location = new System.Drawing.Point(618, 353);
             this.Fave14.Name = "Fave14";
             this.Fave14.Size = new System.Drawing.Size(138, 144);
             this.Fave14.TabIndex = 9;
             this.Fave14.TabStop = false;
-            this.Fave14.Click += new System.EventHandler(this.Fave14_Click);
+            this.Fave14.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave8
             // 
             this.Fave8.BackColor = System.Drawing.Color.White;
+            this.Fave8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave8.BackgroundImage")));
             this.Fave8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave8.Location = new System.Drawing.Point(285, 194);
             this.Fave8.Name = "Fave8";
             this.Fave8.Size = new System.Drawing.Size(138, 144);
             this.Fave8.TabIndex = 8;
             this.Fave8.TabStop = false;
-            this.Fave8.Click += new System.EventHandler(this.Fave8_Click);
+            this.Fave8.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave13
             // 
             this.Fave13.BackColor = System.Drawing.Color.White;
+            this.Fave13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave13.BackgroundImage")));
             this.Fave13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave13.Location = new System.Drawing.Point(119, 353);
             this.Fave13.Name = "Fave13";
             this.Fave13.Size = new System.Drawing.Size(138, 144);
             this.Fave13.TabIndex = 7;
             this.Fave13.TabStop = false;
-            this.Fave13.Click += new System.EventHandler(this.Fave13_Click);
+            this.Fave13.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave7
             // 
             this.Fave7.BackColor = System.Drawing.Color.White;
+            this.Fave7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave7.BackgroundImage")));
             this.Fave7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave7.Location = new System.Drawing.Point(119, 194);
             this.Fave7.Name = "Fave7";
             this.Fave7.Size = new System.Drawing.Size(138, 144);
             this.Fave7.TabIndex = 6;
             this.Fave7.TabStop = false;
-            this.Fave7.Click += new System.EventHandler(this.Fave7_Click);
+            this.Fave7.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave6
             // 
@@ -1210,7 +1238,7 @@
             this.Fave6.Size = new System.Drawing.Size(138, 144);
             this.Fave6.TabIndex = 5;
             this.Fave6.TabStop = false;
-            this.Fave6.Click += new System.EventHandler(this.Fave6_Click);
+            this.Fave6.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave5
             // 
@@ -1222,7 +1250,7 @@
             this.Fave5.Size = new System.Drawing.Size(138, 144);
             this.Fave5.TabIndex = 4;
             this.Fave5.TabStop = false;
-            this.Fave5.Click += new System.EventHandler(this.Fave5_Click);
+            this.Fave5.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave4
             // 
@@ -1234,7 +1262,7 @@
             this.Fave4.Size = new System.Drawing.Size(138, 144);
             this.Fave4.TabIndex = 3;
             this.Fave4.TabStop = false;
-            this.Fave4.Click += new System.EventHandler(this.Fave4_Click);
+            this.Fave4.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave3
             // 
@@ -1246,7 +1274,7 @@
             this.Fave3.Size = new System.Drawing.Size(138, 144);
             this.Fave3.TabIndex = 2;
             this.Fave3.TabStop = false;
-            this.Fave3.Click += new System.EventHandler(this.Fave3_Click);
+            this.Fave3.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave2
             // 
@@ -1258,7 +1286,7 @@
             this.Fave2.Size = new System.Drawing.Size(138, 144);
             this.Fave2.TabIndex = 1;
             this.Fave2.TabStop = false;
-            this.Fave2.Click += new System.EventHandler(this.Fave2_Click);
+            this.Fave2.Click += new System.EventHandler(this.pictureClicked);
             // 
             // Fave1
             // 
@@ -1270,7 +1298,7 @@
             this.Fave1.Size = new System.Drawing.Size(138, 144);
             this.Fave1.TabIndex = 0;
             this.Fave1.TabStop = false;
-            this.Fave1.Click += new System.EventHandler(this.Fave1_Click);
+            this.Fave1.Click += new System.EventHandler(this.pictureClicked);
             // 
             // openFileDialog1
             // 
