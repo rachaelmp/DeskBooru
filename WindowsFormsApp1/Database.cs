@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Diagnostics;
 using System.Text;
 
 namespace DeskBooruApp
@@ -201,6 +202,38 @@ namespace DeskBooruApp
                 transaction.Commit();
             }
             this.CloseConnection();
+        }
+
+        //this function will take a series of tags and try to match images with that combination of tags
+        //So this one kinda takes user input and pastes it into the SQL directly
+        //BAD IDEA!!! But, one cannot pass multiple values in a single parameter, and iterating through it is probably a better idea
+        //FIx this maybe!
+        public List<string> image_search(List<string> tagList)
+        {
+            //construct string
+            string tagString = "'" + String.Join("', '", tagList.ToArray()) + "'";
+
+
+            //somewhat complex query adapted from https://stackoverflow.com/questions/3876240/need-help-with-sql-query-to-find-things-tagged-with-all-specified-tags/3876276#3876276 
+            //what we need to do is format the tags into something like 'tag1', 'tag2' and then also provide the number of tags
+            string query = "SELECT images.image_path FROM images " +
+                "WHERE images.ID IN (SELECT tg.image_id " +
+                "FROM image_tags tg " +
+                "JOIN tags ON tags.tag_id = tg.tag_id " +
+                $"WHERE tags.tag_name IN ({tagString}) " +
+                "GROUP BY tg.image_id " +
+                $"HAVING COUNT(DISTINCT tags.tag_name) = {tagList.Count})";
+            SQLiteCommand myCommand = new SQLiteCommand(query, this.myConnection);
+            this.OpenConnection();
+
+            List<string> imageLocations = new List<string>();
+            using SQLiteDataReader rdr = myCommand.ExecuteReader();
+            while (rdr.Read())
+            {
+                imageLocations.Add(rdr.GetString(0));
+            }
+            this.CloseConnection();
+            return imageLocations;
         }
 
         /// #5:
