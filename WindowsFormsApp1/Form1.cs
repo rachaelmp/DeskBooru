@@ -283,6 +283,7 @@ namespace WindowsFormsApp1
             
         }
 
+        //TODO move this to Database.cs
         private void TagListRichTexBox_TextChanged(object sender, EventArgs e)
         {
             //Attempting to print tags into textbox
@@ -306,144 +307,55 @@ namespace WindowsFormsApp1
         // This section of code is for all the picture boxes to open the Form 2
         // So we can change what we can in one small place rather than looking for it
 
-        // This is in the Search Panel
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
         // This is in the Favorite Panel
-        private void Fave1_Click(object sender, EventArgs e)
+        private void Fave_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
         }
 
-        private void Fave2_Click(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
+            Database db = new Database();
+            //collection of pictureboxes
+            PictureBox[] boxes = { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8 };
+            //turns search string into a list
+            List<string> tags = searchTextBox.Text.Split(", ").ToList();
+            List<string> imageLocations = db.image_search(tags);
+            for (int i = 0; i < 8; i++)
+            {
+                if (i < imageLocations.Count)
+                {
+                    //sets the new image for picturebox
+                    boxes[i].ImageLocation = imageLocations[i];
+                    boxes[i].SizeMode = PictureBoxSizeMode.Zoom;
+                    //load a default background so it doesnt ruin the aesthetic
+                    boxes[i].BackgroundImage = DeskBooruApp.Properties.Resources.DarkGradient;
+                    //refresh to make sure it loads everything!
+                    boxes[i].Refresh();
+                }
+                else
+                {
+                    boxes[i].Image = null;
+                    boxes[i].BackgroundImage = DeskBooruApp.Properties.Resources.DarkGradient;
+                    //refresh to make sure it loads everything!
+                    boxes[i].Refresh();
+                }
+
+            }
+
         }
 
-        private void Fave3_Click(object sender, EventArgs e)
+        //when user presses enter in textbox, search button is triggered
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave4_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave5_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave7_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave8_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave9_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave10_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave6_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave13_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave12_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave11_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave14_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-        }
-
-        private void Fave15_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
+            if (e.KeyCode == Keys.Return)
+            {
+                SearchButton_Click(sender, e);
+                //these two functions prevent windows from making a "DING" when the enter button is pressed
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

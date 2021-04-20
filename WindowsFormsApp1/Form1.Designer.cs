@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -43,10 +43,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.ImageTaggingPanel = new System.Windows.Forms.TabPage();
             this.SingleImageStatusColor = new System.Windows.Forms.TextBox();
             this.SingleImgStatus = new System.Windows.Forms.Label();
@@ -132,10 +132,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.ImageTaggingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePreviewSingle)).BeginInit();
             this.AddFolderPanel.SuspendLayout();
@@ -167,12 +167,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Fave1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // searchTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 23);
-            this.textBox1.TabIndex = 0;
+            this.searchTextBox.Location = new System.Drawing.Point(183, 21);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(166, 23);
+            this.searchTextBox.TabIndex = 0;
+            this.searchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox_KeyDown);
             // 
             // label1
             // 
@@ -198,13 +199,14 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "🔎";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.searchTextBox);
             this.panel1.ForeColor = System.Drawing.SystemColors.Control;
             this.panel1.Location = new System.Drawing.Point(59, 3);
             this.panel1.Name = "panel1";
@@ -281,10 +283,10 @@
             this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox8);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox6);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox7);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox8);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(69, 75);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(866, 506);
@@ -300,7 +302,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.Fave_Click);
             // 
             // pictureBox2
             // 
@@ -312,7 +314,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(200, 200);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.Click += new System.EventHandler(this.Fave_Click);
             // 
             // pictureBox3
             // 
@@ -324,7 +326,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(200, 200);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.Click += new System.EventHandler(this.Fave_Click);
             // 
             // pictureBox4
             // 
@@ -336,55 +338,55 @@
             this.pictureBox4.Size = new System.Drawing.Size(200, 200);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 209);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.pictureBox4.Click += new System.EventHandler(this.Fave_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(209, 209);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 209);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.Fave_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(415, 209);
+            this.pictureBox6.Location = new System.Drawing.Point(209, 209);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pictureBox6.Click += new System.EventHandler(this.Fave_Click);
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(621, 209);
+            this.pictureBox7.Location = new System.Drawing.Point(415, 209);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabIndex = 5;
             this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.pictureBox7.Click += new System.EventHandler(this.Fave_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(621, 209);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox8.TabIndex = 6;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.Fave_Click);
             // 
             // ImageTaggingPanel
             // 
@@ -1084,7 +1086,7 @@
             this.Fave11.Size = new System.Drawing.Size(138, 144);
             this.Fave11.TabIndex = 21;
             this.Fave11.TabStop = false;
-            this.Fave11.Click += new System.EventHandler(this.Fave11_Click);
+            this.Fave11.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave12
             // 
@@ -1095,7 +1097,7 @@
             this.Fave12.Size = new System.Drawing.Size(138, 144);
             this.Fave12.TabIndex = 20;
             this.Fave12.TabStop = false;
-            this.Fave12.Click += new System.EventHandler(this.Fave12_Click);
+            this.Fave12.Click += new System.EventHandler(this.Fave_Click);
             // 
             // FaveForwardButton
             // 
@@ -1132,7 +1134,7 @@
             this.Fave10.Size = new System.Drawing.Size(138, 144);
             this.Fave10.TabIndex = 12;
             this.Fave10.TabStop = false;
-            this.Fave10.Click += new System.EventHandler(this.Fave10_Click);
+            this.Fave10.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave15
             // 
@@ -1143,7 +1145,7 @@
             this.Fave15.Size = new System.Drawing.Size(138, 144);
             this.Fave15.TabIndex = 11;
             this.Fave15.TabStop = false;
-            this.Fave15.Click += new System.EventHandler(this.Fave15_Click);
+            this.Fave15.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave9
             // 
@@ -1154,7 +1156,7 @@
             this.Fave9.Size = new System.Drawing.Size(138, 144);
             this.Fave9.TabIndex = 10;
             this.Fave9.TabStop = false;
-            this.Fave9.Click += new System.EventHandler(this.Fave9_Click);
+            this.Fave9.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave14
             // 
@@ -1165,7 +1167,7 @@
             this.Fave14.Size = new System.Drawing.Size(138, 144);
             this.Fave14.TabIndex = 9;
             this.Fave14.TabStop = false;
-            this.Fave14.Click += new System.EventHandler(this.Fave14_Click);
+            this.Fave14.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave8
             // 
@@ -1176,7 +1178,7 @@
             this.Fave8.Size = new System.Drawing.Size(138, 144);
             this.Fave8.TabIndex = 8;
             this.Fave8.TabStop = false;
-            this.Fave8.Click += new System.EventHandler(this.Fave8_Click);
+            this.Fave8.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave13
             // 
@@ -1187,7 +1189,7 @@
             this.Fave13.Size = new System.Drawing.Size(138, 144);
             this.Fave13.TabIndex = 7;
             this.Fave13.TabStop = false;
-            this.Fave13.Click += new System.EventHandler(this.Fave13_Click);
+            this.Fave13.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave7
             // 
@@ -1198,7 +1200,7 @@
             this.Fave7.Size = new System.Drawing.Size(138, 144);
             this.Fave7.TabIndex = 6;
             this.Fave7.TabStop = false;
-            this.Fave7.Click += new System.EventHandler(this.Fave7_Click);
+            this.Fave7.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave6
             // 
@@ -1210,7 +1212,7 @@
             this.Fave6.Size = new System.Drawing.Size(138, 144);
             this.Fave6.TabIndex = 5;
             this.Fave6.TabStop = false;
-            this.Fave6.Click += new System.EventHandler(this.Fave6_Click);
+            this.Fave6.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave5
             // 
@@ -1222,7 +1224,7 @@
             this.Fave5.Size = new System.Drawing.Size(138, 144);
             this.Fave5.TabIndex = 4;
             this.Fave5.TabStop = false;
-            this.Fave5.Click += new System.EventHandler(this.Fave5_Click);
+            this.Fave5.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave4
             // 
@@ -1234,7 +1236,7 @@
             this.Fave4.Size = new System.Drawing.Size(138, 144);
             this.Fave4.TabIndex = 3;
             this.Fave4.TabStop = false;
-            this.Fave4.Click += new System.EventHandler(this.Fave4_Click);
+            this.Fave4.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave3
             // 
@@ -1246,7 +1248,7 @@
             this.Fave3.Size = new System.Drawing.Size(138, 144);
             this.Fave3.TabIndex = 2;
             this.Fave3.TabStop = false;
-            this.Fave3.Click += new System.EventHandler(this.Fave3_Click);
+            this.Fave3.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave2
             // 
@@ -1258,7 +1260,7 @@
             this.Fave2.Size = new System.Drawing.Size(138, 144);
             this.Fave2.TabIndex = 1;
             this.Fave2.TabStop = false;
-            this.Fave2.Click += new System.EventHandler(this.Fave2_Click);
+            this.Fave2.Click += new System.EventHandler(this.Fave_Click);
             // 
             // Fave1
             // 
@@ -1270,7 +1272,7 @@
             this.Fave1.Size = new System.Drawing.Size(138, 144);
             this.Fave1.TabIndex = 0;
             this.Fave1.TabStop = false;
-            this.Fave1.Click += new System.EventHandler(this.Fave1_Click);
+            this.Fave1.Click += new System.EventHandler(this.Fave_Click);
             // 
             // openFileDialog1
             // 
@@ -1301,10 +1303,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ImageTaggingPanel.ResumeLayout(false);
             this.ImageTaggingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePreviewSingle)).EndInit();
@@ -1344,7 +1346,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
@@ -1357,10 +1359,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label label4;
