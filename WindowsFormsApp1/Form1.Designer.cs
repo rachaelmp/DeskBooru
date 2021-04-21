@@ -247,6 +247,7 @@
             // 
             // TabPanel1
             // 
+            this.TabPanel1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.TabPanel1.Controls.Add(this.SearchPanel);
             this.TabPanel1.Controls.Add(this.ImageTaggingPanel);
             this.TabPanel1.Controls.Add(this.AddFolderPanel);
@@ -928,6 +929,7 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(3, 3);
             this.pictureBox9.Name = "pictureBox9";
@@ -938,6 +940,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(284, 3);
             this.pictureBox10.Name = "pictureBox10";
@@ -948,6 +951,7 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(565, 3);
             this.pictureBox11.Name = "pictureBox11";
@@ -1078,6 +1082,7 @@
             // Fave11
             // 
             this.Fave11.BackColor = System.Drawing.Color.White;
+            this.Fave11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave11.BackgroundImage")));
             this.Fave11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave11.Location = new System.Drawing.Point(451, 353);
             this.Fave11.Name = "Fave11";
@@ -1089,6 +1094,7 @@
             // Fave12
             // 
             this.Fave12.BackColor = System.Drawing.Color.White;
+            this.Fave12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave12.BackgroundImage")));
             this.Fave12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave12.Location = new System.Drawing.Point(285, 353);
             this.Fave12.Name = "Fave12";
@@ -1126,6 +1132,7 @@
             // Fave10
             // 
             this.Fave10.BackColor = System.Drawing.Color.White;
+            this.Fave10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave10.BackgroundImage")));
             this.Fave10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave10.Location = new System.Drawing.Point(618, 194);
             this.Fave10.Name = "Fave10";
@@ -1137,6 +1144,7 @@
             // Fave15
             // 
             this.Fave15.BackColor = System.Drawing.Color.White;
+            this.Fave15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave15.BackgroundImage")));
             this.Fave15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave15.Location = new System.Drawing.Point(778, 353);
             this.Fave15.Name = "Fave15";
@@ -1148,6 +1156,7 @@
             // Fave9
             // 
             this.Fave9.BackColor = System.Drawing.Color.White;
+            this.Fave9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave9.BackgroundImage")));
             this.Fave9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave9.Location = new System.Drawing.Point(451, 194);
             this.Fave9.Name = "Fave9";
@@ -1159,6 +1168,7 @@
             // Fave14
             // 
             this.Fave14.BackColor = System.Drawing.Color.White;
+            this.Fave14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave14.BackgroundImage")));
             this.Fave14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave14.Location = new System.Drawing.Point(618, 353);
             this.Fave14.Name = "Fave14";
@@ -1170,6 +1180,7 @@
             // Fave8
             // 
             this.Fave8.BackColor = System.Drawing.Color.White;
+            this.Fave8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave8.BackgroundImage")));
             this.Fave8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave8.Location = new System.Drawing.Point(285, 194);
             this.Fave8.Name = "Fave8";
@@ -1181,6 +1192,7 @@
             // Fave13
             // 
             this.Fave13.BackColor = System.Drawing.Color.White;
+            this.Fave13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave13.BackgroundImage")));
             this.Fave13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave13.Location = new System.Drawing.Point(119, 353);
             this.Fave13.Name = "Fave13";
@@ -1192,6 +1204,7 @@
             // Fave7
             // 
             this.Fave7.BackColor = System.Drawing.Color.White;
+            this.Fave7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Fave7.BackgroundImage")));
             this.Fave7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Fave7.Location = new System.Drawing.Point(119, 194);
             this.Fave7.Name = "Fave7";
