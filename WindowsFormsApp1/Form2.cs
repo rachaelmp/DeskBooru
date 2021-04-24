@@ -21,5 +21,14 @@ namespace DeskBooruApp
         {
 
         }
+
+        public void UpdatePictureBox(System.Drawing.Image picture)
+        {
+            if (this.InfoPictureBox.Image != null)
+            {
+                this.InfoPictureBox.Image.Dispose();
+            }
+            this.InfoPictureBox.Image = picture;
+        }
     }
 }

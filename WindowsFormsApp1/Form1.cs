@@ -310,8 +310,14 @@ namespace WindowsFormsApp1
         // This is in the Favorite Panel
         private void Fave_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
+            Image picture = ((PictureBox)sender).Image;
+
+            if (picture != null)
+            {
+                Form2 form2 = new Form2();
+                form2.UpdatePictureBox(picture);
+                form2.Show();
+            }
         }
 
         private void SearchButton_Click(object sender, EventArgs e)
