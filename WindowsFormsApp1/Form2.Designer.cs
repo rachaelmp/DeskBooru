@@ -43,9 +43,11 @@ namespace DeskBooruApp
             // 
             this.InfoPictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InfoPictureBox.BackgroundImage")));
             this.InfoPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InfoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("InfoPictureBox.Image")));
             this.InfoPictureBox.Location = new System.Drawing.Point(88, 24);
             this.InfoPictureBox.Name = "InfoPictureBox";
             this.InfoPictureBox.Size = new System.Drawing.Size(327, 413);
+            this.InfoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.InfoPictureBox.TabIndex = 0;
             this.InfoPictureBox.TabStop = false;
             // 
@@ -62,7 +64,9 @@ namespace DeskBooruApp
             // InfoLabel1
             // 
             this.InfoLabel1.AutoSize = true;
+            this.InfoLabel1.BackColor = System.Drawing.Color.Transparent;
             this.InfoLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InfoLabel1.ForeColor = System.Drawing.SystemColors.Control;
             this.InfoLabel1.Location = new System.Drawing.Point(88, 440);
             this.InfoLabel1.Name = "InfoLabel1";
             this.InfoLabel1.Size = new System.Drawing.Size(40, 21);
@@ -72,7 +76,9 @@ namespace DeskBooruApp
             // InfoLabel2
             // 
             this.InfoLabel2.AutoSize = true;
+            this.InfoLabel2.BackColor = System.Drawing.Color.Transparent;
             this.InfoLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InfoLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.InfoLabel2.Location = new System.Drawing.Point(88, 556);
             this.InfoLabel2.Name = "InfoLabel2";
             this.InfoLabel2.Size = new System.Drawing.Size(89, 21);
@@ -90,7 +96,7 @@ namespace DeskBooruApp
             // 
             // InfoSaveButton
             // 
-            this.InfoSaveButton.BackgroundImage = global::DeskBooruApp.Properties.Resources.DarkGradient;
+            this.InfoSaveButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InfoSaveButton.BackgroundImage")));
             this.InfoSaveButton.FlatAppearance.BorderSize = 0;
             this.InfoSaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InfoSaveButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -107,7 +113,8 @@ namespace DeskBooruApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BackgroundImage = global::DeskBooruApp.Properties.Resources.DarkGradient;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(506, 688);
             this.Controls.Add(this.InfoSaveButton);
             this.Controls.Add(this.InfoCommentTextBox);
@@ -115,8 +122,10 @@ namespace DeskBooruApp
             this.Controls.Add(this.InfoLabel1);
             this.Controls.Add(this.InfoTagTextBox);
             this.Controls.Add(this.InfoPictureBox);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "DeskBooru - Image Info";
             ((System.ComponentModel.ISupportInitialize)(this.InfoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
